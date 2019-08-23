@@ -153,7 +153,7 @@
         <input type="password" placeholder="Password" name="Password" value="">
         </div>
         <label>
-          <input type="checkbox" checked="checked" name="remember"> Remember me
+          <input type="checkbox" checked="checked" name="remember"> Remember Me
         </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <span class="psw">New  <a href="UserRegistration.php">User</a></span>
        <br>
