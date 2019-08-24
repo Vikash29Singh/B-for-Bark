@@ -174,13 +174,11 @@ include 'conn_file.php';
             <br>
          <h4>Search&nbsp;&nbsp;&nbsp;for&nbsp;&nbsp;&nbsp;Symptoms </h4>
             <br>
-
             <div class="w3ls_banner_txt text-center ml-auto pr-xl-0 pr-sm-4 pr-5">
             <form>
                       <input type="text" name="Symptoms" placeholder="Symptoms..">
             </form>
             </div>
-
 <!--        <h3>We absolutely love and care for your Pets.</h3>-->
 <!--        <a class ="btn btn-outline-light btn-lg" href ="#course">Get Started</a>-->
            
