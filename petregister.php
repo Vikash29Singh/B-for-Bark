@@ -56,7 +56,7 @@
         }
 
         .textbox i {
-            width: 60px;
+            width: 100px;
             float: left;
             text-align: center;
         }
@@ -67,7 +67,7 @@
             background: none;
             color: black;
             font-size: 18px;
-            width: 150px;
+            width: 300px;
             float: left;
             margin: 0 10px;
         }
@@ -91,7 +91,9 @@
     <div id="home">
         <!--        navigation-->
         <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top ">
-            <a class="navbar-brand" href="">Welcome How are your Pets</a>
+            <a class="navbar-brand" href="index.html"><img src="img/abc_new.png"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<!--            <a class="navbar-brand" href="">Hey <span style="color:#1ebba3;"> Welcome Back</span> How is your <span style="color:#1ebba3;">Pet</span></a>-->
+
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -102,62 +104,61 @@
                     </li>
                     <li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pets</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="healthcard.php">Health card</a>
+                        <a class="nav-link" href="search.php">Search</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="petregister.php">Pet-Register</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">History</a>
+                     <li class="nav-item">
+                        <a class="nav-link" href="">Logout</a>
                     </li>
                 </ul>
             </div>
         </nav>
 
-        <!-- end vavigation-->
+    </div>
+
+    <!-- end vavigation-->
 
 
-        <div class="col-12 narrow text-center login-box">
-            <form action="search.php" method="post">
-                <h1>Pet Registration</h1>
-                <div class="textbox">
-                    <!--        <i class="fas fa-user fa-3x " aria-hidden="true"></i>-->
-                    <input type="text" placeholder="Pet Name" name="Pname" value="">
-                </div>
+    <div class="col-12 narrow text-center login-box">
+        <form action="search.php" method="post">
+            <h1>Pet Registration</h1>
+            <div class="textbox">
+                <!--        <i class="fas fa-user fa-3x " aria-hidden="true"></i>-->
+                <input type="text" placeholder="Pet Name" name="Pname" value="">
+            </div>
 
-                <div class="textbox">
-                    <!--        <i class="fas fa-lock fa-3x" aria-hidden="true"></i>-->
-                    <input type="text" placeholder="Breed" name="Pbreed" value="">
-                </div>
-                <div class="textbox">
-                    <!--        <i class="fas fa-lock fa-3x" aria-hidden="true"></i>-->
-                    <input type="text" placeholder="Age" name="Page" value="">
-                </div>
-                <div class="textbox">
-                    <!--        <i class="fas fa-lock fa-3x" aria-hidden="true"></i>-->
-                    <input type="text" placeholder="Weight" name="Pweight" value="">
-                </div>
-                <div class="textbox">
-                    <!--        <i class="fas fa-lock fa-3x" aria-hidden="true"></i>-->
-                    <input type="text" placeholder="Blood-Group" name="Pbgroup" value="">
-                </div>
-                <div class="textbox">
-                    <!--        <i class="fas fa-lock fa-3x" aria-hidden="true"></i>-->
-                    <input type="text" placeholder="Allergies (seperate by ',')" name="Pallergies" value="">
-                </div>
-                <div class="textbox">
-                    <!--        <i class="fas fa-lock fa-3x" aria-hidden="true"></i>-->
-                    <input type="text" placeholder="Medication (Seperate by ',')" name="Pmedication" value="">
-                </div>
+            <div class="textbox">
+                <!--        <i class="fas fa-lock fa-3x" aria-hidden="true"></i>-->
+                <input type="text" placeholder="Breed" name="Pbreed" value="">
+            </div>
+            <div class="textbox">
+                <!--        <i class="fas fa-lock fa-3x" aria-hidden="true"></i>-->
+                <input type="text" placeholder="Age" name="Page" value="">
+            </div>
+            <div class="textbox">
+                <!--        <i class="fas fa-lock fa-3x" aria-hidden="true"></i>-->
+                <input type="text" placeholder="Weight" name="Pweight" value="">
+            </div>
+            <div class="textbox">
+                <!--        <i class="fas fa-lock fa-3x" aria-hidden="true"></i>-->
+                <input type="text" placeholder="Blood-Group" name="Pbgroup" value="">
+            </div>
+            <div class="textbox">
+                <!--        <i class="fas fa-lock fa-3x" aria-hidden="true"></i>-->
+                <input type="text" placeholder="Allergies(seperate by ',')" name="Pallergies" value="">
+            </div>
+            <div class="textbox">
+                <!--        <i class="fas fa-lock fa-3x" aria-hidden="true"></i>-->
+                <input type="text" placeholder="Medication(Seperate by',')" name="Pmedication" value="">
+            </div>
 
 
-                <button class="btn btn-secondary btn-md" href="" target="_blank" name="Pregister">Register</button>
-            </form>
+            <button class="btn btn-secondary btn-md" href="" target="_blank" name="Pregister">Register</button>
+        </form>
 
-            <?php
+        <?php
     /*
     if(isset($_POST['Pregister']))
     {
@@ -207,7 +208,7 @@
     }
     */
     ?>
-        </div>
+    </div>
     </div>
 </body>
 

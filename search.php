@@ -154,8 +154,8 @@
             opacity: 0.5;
             font-weight: bolder;
         }
-        
-/*        second search bar*/
+
+        /*        second search bar*/
         .container1 {
             position: absolute;
             margin: auto;
@@ -197,7 +197,7 @@
             left: 22px;
             width: 12px;
             height: 2px;
-            background:white;
+            background: white;
             transform: rotate(45deg);
             transition: all .5s;
         }
@@ -473,14 +473,14 @@ include 'conn_file.php';
         <br>
         <br>
         <br>
-        
+
         <h4>Search&nbsp;&nbsp;&nbsp;for&nbsp;&nbsp;&nbsp;Symptoms </h4>
         <br>
         <div class="container1">
             <input type="text" placeholder="Symptoms...">
             <div class="search"></div>
         </div>
-<!--
+        <!--
         <div class="w3ls_banner_txt text-center ml-auto pr-xl-0 pr-sm-4 pr-5">
             <form>
                 <input type="text" name="Symptoms" placeholder="Symptoms..">
@@ -497,7 +497,8 @@ include 'conn_file.php';
 
 
     <!--  course section-->
-    <div id="course" class="offset">
+
+    <div id="clients" class="offset">
         <div class="col-12 narrow text-center">
             <h1>Food Suggestion of the Month.</h1>
             <p class="lead">The dogs should be friendly,outgoing,healthy,well-groomed and love to be fussed. All breeds, crossbreeds, shapes and sizes are welcome.</p>
@@ -521,9 +522,11 @@ include 'conn_file.php';
                     <p>Owning a dog is a joy, privilege, and responsibility. B for Bark is committed to protecting the health and well-being of all dogs.</p>
                     <strong>Contact Info</strong>
                     <p>(888) 888-8888<br>email@bforbark.com</p>
+                    <!--
                     <a href="" target="_blank"><i class="fab fa-facebook-square"></i></a>
                     <a href="" target="_blank"><i class="fab fa-twitter-square"></i></a>
                     <a href="" target="_blank"><i class="fab fa-instagram"></i></a>
+-->
                 </div>
                 <hr class="socket">
                 &copy;B for Bark.
