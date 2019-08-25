@@ -110,7 +110,7 @@
           </ul>
         </div>
     </nav>
-</div>
+
 <!-- end vavigation-->
     
     
@@ -202,7 +202,8 @@
     */
     ?>
     </div>
-    </body>
+    </div>
+ </body>
 </html>
     
     

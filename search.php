@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -145,7 +144,7 @@ include 'conn_file.php';
                <a class= "nav-link" href="healthcard.php">Health card</a>
             </li>
              <li class="nav-item">
-               <a class= "nav-link" href="petregister.html">Pet-Register</a>
+               <a class= "nav-link" href="petregister.php">Pet-Register</a>
             </li>
              <li class="nav-item">
                <a class= "nav-link" href="">History</a>
