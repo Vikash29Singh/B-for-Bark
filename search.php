@@ -15,44 +15,330 @@ else{
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Disease Recognition System</title>
-	<link rel="stylesheet" href="bootstrap-4.1.3-dist/css/bootstrap.min.css">
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="css/fixed.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Disease Recognition System</title>
+    <link rel="stylesheet" href="bootstrap-4.1.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/fixed.css">
+    <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+    <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+
     <style>
+        @import url("https://fonts.googleapis.com/css?family=Inconsolata:700");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            background: #252525;
+        }
+
+        .container {
+            position: absolute;
+            margin: auto;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 300px;
+            height: 100px;
+        }
+
+        .container .search {
+            position: absolute;
+            margin: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 80px;
+            background: #1ebba3;
+            border-radius: 50%;
+            transition: all 1s;
+            z-index: 4;
+            box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
+        }
+
+        .container .search:hover {
+            cursor: pointer;
+        }
+
+        .container .search::before {
+            content: "";
+            position: absolute;
+            margin: auto;
+            top: 22px;
+            right: 0;
+            bottom: 0;
+            left: 22px;
+            width: 12px;
+            height: 2px;
+            background: white;
+            transform: rotate(45deg);
+            transition: all .5s;
+        }
+
+        .container .search::after {
+            content: "";
+            position: absolute;
+            margin: auto;
+            top: -5px;
+            right: 0;
+            bottom: 0;
+            left: -5px;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            border: 2px solid white;
+            transition: all .5s;
+        }
+
+        .container input {
+            font-family: 'Inconsolata', monospace;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 50px;
+            outline: none;
+            border: none;
+            background: #1ebba3;
+            color: white;
+            text-shadow: 0 0 10px #1ebba3;
+            padding: 0 80px 0 20px;
+            border-radius: 30px;
+            box-shadow: 0 0 25px 0 #1ebba3, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
+            transition: all 1s;
+            opacity: 0;
+            z-index: 5;
+            font-weight: bolder;
+            letter-spacing: 0.1em;
+        }
+
+        .container input:hover {
+            cursor: pointer;
+        }
+
+        .container input:focus {
+            width: 300px;
+            opacity: 1;
+            cursor: text;
+        }
+
+        .container input:focus~.search {
+            right: -250px;
+            background: #151515;
+            z-index: 6;
+        }
+
+        .container input:focus~.search::before {
+            top: 0;
+            left: 0;
+            width: 25px;
+        }
+
+        .container input:focus~.search::after {
+            top: 0;
+            left: 0;
+            width: 25px;
+            height: 2px;
+            border: none;
+            background: white;
+            border-radius: 0%;
+            transform: rotate(-45deg);
+        }
+
+        .container input::placeholder {
+            color: white;
+            opacity: 0.5;
+            font-weight: bolder;
+        }
+
+        /*        second search bar*/
+        .container1 {
+            position: absolute;
+            margin: auto;
+            top: 25px;
+            left: 0;
+            right: 0;
+            bottom: -300px;
+            width: 300px;
+            height: 100px;
+        }
+
+        .container1 .search {
+            position: absolute;
+            margin: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 80px;
+            background: #1ebba3;
+            border-radius: 50%;
+            transition: all 1s;
+            z-index: 4;
+            box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
+        }
+
+        .container1 .search:hover {
+            cursor: pointer;
+        }
+
+        .container1 .search::before {
+            content: "";
+            position: absolute;
+            margin: auto;
+            top: 22px;
+            right: 0;
+            bottom: 0;
+            left: 22px;
+            width: 12px;
+            height: 2px;
+            background: white;
+            transform: rotate(45deg);
+            transition: all .5s;
+        }
+
+        .container1 .search::after {
+            content: "";
+            position: absolute;
+            margin: auto;
+            top: -5px;
+            right: 0;
+            bottom: 0;
+            left: -5px;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            border: 2px solid white;
+            transition: all .5s;
+        }
+
+        .container1 input {
+            font-family: 'Inconsolata', monospace;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 50px;
+            outline: none;
+            border: none;
+            background: #1ebba3;
+            color: white;
+            text-shadow: 0 0 10px #1ebba3;
+            padding: 0 80px 0 20px;
+            border-radius: 30px;
+            box-shadow: 0 0 25px 0 #1ebba3, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
+            transition: all 1s;
+            opacity: 0;
+            z-index: 5;
+            font-weight: bolder;
+            letter-spacing: 0.1em;
+        }
+
+        .container1 input:hover {
+            cursor: pointer;
+        }
+
+        .container1 input:focus {
+            width: 300px;
+            opacity: 1;
+            cursor: text;
+        }
+
+        .container1 input:focus~.search {
+            right: -250px;
+            background: #151515;
+            z-index: 6;
+        }
+
+        .container1 input:focus~.search::before {
+            top: 0;
+            left: 0;
+            width: 25px;
+        }
+
+        .container1 input:focus~.search::after {
+            top: 0;
+            left: 0;
+            width: 25px;
+            height: 2px;
+            border: none;
+            background: white;
+            border-radius: 0%;
+            transform: rotate(-45deg);
+        }
+
+        .container1 input::placeholder {
+            color: white;
+            opacity: 0.5;
+            font-weight: bolder;
+        }
+
+
+        /*
         input[type=text] {
-        width: 130px;
-        box-sizing: border-box;
-        border: 2px solid #ccc;
-        border-radius: 4px;
-        font-size: 16px;
-        background-color: white;
-        background-image: url('searchicon.png');
-        background-position: 10px 10px; 
-        background-repeat: no-repeat;
-        padding: 12px 20px 12px 40px;
-        -webkit-transition: width 0.4s ease-in-out;
-        transition: width 0.4s ease-in-out;
+            width: 130px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: white;
+            background-image: url('searchicon.png');
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            padding: 12px 20px 12px 40px;
+            -webkit-transition: width 0.4s ease-in-out;
+            transition: width 0.4s ease-in-out;
         }
 
         input[type=text]:focus {
-        width: 50%;
+            width: 50%;
         }
-        .dis
-        {
-        color: white;
+
+        .dis {
+            color: white;
 
         }
-        .sym
-        {
-        color: white;
+
+        .sym {
+            color: white;
 
         }
+*/
 
     </style>
+<script>
+        window.console = window.console || function(t) {};
+
+    </script>
+    <script>
+        if (document.location.search.match(/type=embed/gi)) {
+            window.parent.postMessage("resize", "*");
+        }
+
+    </script>
  </head>
     <?php
 
@@ -104,7 +390,7 @@ else{
     }
     
     ?>
-    <?php    
+<?php    
 
     if(isset($_POST['Login']))
         {
@@ -135,14 +421,16 @@ else{
         }
             
 ?>
-<body data-spy ="scroll" data-target="#navbarResponsive">
-<!--    home section-->
+
+<body data-spy="scroll" data-target="#navbarResponsive" translate="no">
+    <!--    home section-->
     <div id="home">
 <!--        navigation-->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top ">
-        <a class="navbar-brand" href="">Welcome <?php echo $user; ?>  How is your Pet</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                data-target="#navbarResponsive">
+        <a class="navbar-brand" href="index.html"><img src="img/abc_new.png"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="navbar-brand" href="">Hey <span style="color:#1ebba3;"> <?php echo $user; ?> Welcome Back</span> How is your <span style="color:#1ebba3;">Pet</span></a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -158,7 +446,7 @@ else{
                <a class= "nav-link" href="healthcard.php">Health card</a>
             </li>
              <li class="nav-item">
-               <a class= "nav-link" href="petregister.html">Pet-Register</a>
+               <a class= "nav-link" href="petregister.php">Pet-Register</a>
             </li>
              <li class="nav-item">
                <a class= "nav-link" href="">History</a>
@@ -167,74 +455,98 @@ else{
         </div>
     </nav>
     </div>
-<!-- end vavigation-->
-            <!-- start Landing page section-->
-            <div class="landing">
-              <div class="home-wrap">
-                  <div class="home-inner2">
-                  </div>
-                </div>
+    <!-- end vavigation-->
+    <!-- start Landing page section-->
+    <div class="landing">
+        <div class="home-wrap">
+            <div class="home-inner2">
+
             </div>
-        <div class ="caption text-center">
-        <h4>Search&nbsp;&nbsp;&nbsp;for&nbsp;&nbsp;&nbsp;Diseases </h4>
-            <br>
-            <div class="w3ls_banner_txt text-center ml-auto pr-xl-0 pr-sm-4 pr-5">
+        </div>
+
+    </div>
+
+    <div class="caption text-center">
+
+        <h4>Search&nbsp;&nbsp;&nbsp;for&nbsp;&nbsp;&nbsp;Diseases</h4>
+        <br>
+        <!--
+        <div class="w3ls_banner_txt text-center ml-auto pr-xl-0 pr-sm-4 pr-5">
             <form>
-                      <input type="text" name="Disease" placeholder="Disease..">
+                <input type="text" name="Disease" placeholder="Disease..">
             </form>
-            </div>
-            <br>
-            <br>
-         <h4>Search&nbsp;&nbsp;&nbsp;for&nbsp;&nbsp;&nbsp;Symptoms </h4>
-            <br>
-            <div class="w3ls_banner_txt text-center ml-auto pr-xl-0 pr-sm-4 pr-5">
+        </div>
+-->
+        <div class="container">
+            <input type="text" placeholder="Disease...">
+            <div class="search"></div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <h4>Search&nbsp;&nbsp;&nbsp;for&nbsp;&nbsp;&nbsp;Symptoms </h4>
+        <br>
+        <div class="container1">
+            <input type="text" placeholder="Symptoms...">
+            <div class="search"></div>
+        </div>
+        <!--
+        <div class="w3ls_banner_txt text-center ml-auto pr-xl-0 pr-sm-4 pr-5">
             <form>
-                      <input type="text" name="Symptoms" placeholder="Symptoms..">
+                <input type="text" name="Symptoms" placeholder="Symptoms..">
             </form>
-            </div>
-<!--        <h3>We absolutely love and care for your Pets.</h3>-->
-<!--        <a class ="btn btn-outline-light btn-lg" href ="#course">Get Started</a>-->
-           
-            <!-- end landing page-->
-      </div>
-    
-<!--    end home section-->
-    
-        
+        </div>
+-->
+        <!--        <h3>We absolutely love and care for your Pets.</h3>-->
+        <!--        <a class ="btn btn-outline-light btn-lg" href ="#course">Get Started</a>-->
+
+        <!-- end landing page-->
+    </div>
+
+    <!--    end home section-->
+
+
     <!--  course section-->
-    <div id="course" class ="offset">
+
+    <div id="clients" class="offset">
         <div class="col-12 narrow text-center">
             <h1>Food Suggestion of the Month.</h1>
             <p class="lead">The dogs should be friendly,outgoing,healthy,well-groomed and love to be fussed. All breeds, crossbreeds, shapes and sizes are welcome.</p>
-         </div>
-          <div class="col-12 narrow text-center">
+        </div>
+        <div class="col-12 narrow text-center">
             <h1>Monthly Tips.</h1>
             <p class="lead">The dogs should be friendly,outgoing,healthy,well-groomed and love to be fussed. All breeds, crossbreeds, shapes and sizes are welcome.</p>
-         </div>
+        </div>
     </div>
-    
-<!--    end course section-->
-        
-        
-        <!--  contacts section-->
-    <div id="contacts" class ="offset">
-    <footer>
-      <div class= "row justify-content-center">
-          <div class ="col-md-5 text-center">
-          <img src="">
-              <h2>B for Bark</h2>
-              <p>Owning a dog is a joy, privilege, and responsibility. B for Bark is committed to protecting the health and well-being of all dogs.</p>
-              <strong>Contact Info</strong>
-             <p>(888) 888-8888<br>email@bforbark.com</p> 
-              <a href ="" target="_blank"><i class ="fab fa-facebook-square"></i></a>
-              <a href ="" target="_blank"><i class ="fab fa-twitter-square"></i></a>
-              <a href ="" target="_blank"><i class ="fab fa-instagram"></i></a>
-          </div>
-          <hr class ="socket">
-          &copy;B for Bark.
-     </div>  
-    </footer>    
- </div>
-<!--   end contacts section-->
+
+    <!--    end course section-->
+
+
+    <!--  contacts section-->
+    <div id="contacts" class="offset">
+        <footer>
+            <div class="row justify-content-center">
+                <div class="col-md-5 text-center">
+                    <img src="">
+                    <h2>B for Bark</h2>
+                    <p>Owning a dog is a joy, privilege, and responsibility. B for Bark is committed to protecting the health and well-being of all dogs.</p>
+                    <strong>Contact Info</strong>
+                    <p>(888) 888-8888<br>email@bforbark.com</p>
+                    <!--
+                    <a href="" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                    <a href="" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                    <a href="" target="_blank"><i class="fab fa-instagram"></i></a>
+-->
+                </div>
+                <hr class="socket">
+                &copy;B for Bark.
+            </div>
+        </footer>
+    </div>
+    <!--   end contacts section-->
 </body>
+
 </html>
