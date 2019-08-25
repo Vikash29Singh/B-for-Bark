@@ -52,7 +52,7 @@
 
 <!DOCTYPE html>
 <html>
-<?php include 'conn_file.php'; ?>
+<?php include 'conn_file.php';?>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -166,9 +166,6 @@
                     <li class="nav-item">
                         <a class="nav-link" shref="UserRegistration.php">Sign-up</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Logout</a>
-                    </li>
           </ul>
         </div>
     </nav>
@@ -249,5 +246,4 @@
 -->
     </div>
 </body>
-
 </html>

@@ -14,8 +14,7 @@ $sqlp1="SELECT * FROM user_details WHERE Name='$username' and Password='$passwor
 
         
            $resultp1=mysqli_query($conn,$sqlp1);
- 
-              $count1=mysqli_num_rows($resultp1);
+            $count1=mysqli_num_rows($resultp1);
      
    //  echo $count1;
               if($count1>0)

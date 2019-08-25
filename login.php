@@ -1,4 +1,8 @@
-
+<!--File description-->
+<!--
+ File name:B for bark
+ Date:21/6/19
+-->
 <!DOCTYPE html>
 <html>
 
@@ -117,33 +121,30 @@
                         <li class="nav-item">
                             <a class="nav-link" href="UserRegistration.php">Sign-up</a>
                         </li>
-                          <li class="nav-item">
-                        <a class="nav-link" href="">Logout</a>
-                    </li>
                     </ul>
                 </div>
             </nav>
         </div>
 
         <div class="col-12 narrow text-center login-box">
-        <form action="login1.php" method="post">
-        <h1>Sign-in</h1>
-        <div class ="textbox">
-        <!--        <i class="fas fa-user fa-3x " aria-hidden="true"></i>-->
-        <input type="text" placeholder="Username" name="Name" value="">
-        </div>
-        <div class ="textbox">
-        <!--        <i class="fas fa-lock fa-3x" aria-hidden="true"></i>-->
-        <input type="password" placeholder="Password" name="Password" value="">
-        </div>
-        <label>
-          <input type="checkbox" checked="checked" name="remember"> Remember me
-        </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <span class="psw">New  <a href="UserRegistration.php">User</a></span>
-       <br>
-        <br>
-        <button class="btn btn-secondary btn-md" href="search.html" target="_blank" name = "Login">Sign-in</button>
-        </form>
+            <form action="login1.php" method="post">
+                <h1>Sign-in</h1>
+                <div class="textbox">
+                    <!--        <i class="fas fa-user fa-3x " aria-hidden="true"></i>-->
+                    <input type="text" placeholder="Username" name="Name" value="">
+                </div>
+                <div class="textbox">
+                    <!--        <i class="fas fa-lock fa-3x" aria-hidden="true"></i>-->
+                    <input type="password" placeholder="Password" name="Password" value="">
+                </div>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span class="psw">New <a href="UserRegistration.php">User</a></span>
+                <br>
+                <br>
+                <button class="btn btn-secondary btn-md" href="search.html" target="_blank" name="Login">Sign-in</button>
+            </form>
 
             <?php    
 /*
@@ -185,5 +186,4 @@
         </div>
     </div>
 </body>
-
 </html>

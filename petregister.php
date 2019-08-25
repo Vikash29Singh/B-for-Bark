@@ -82,7 +82,6 @@
             cursor: pointer;
             margin: 12px 0;
         }
-
     </style>
 </head>
 
@@ -92,7 +91,7 @@
         <!--        navigation-->
         <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top ">
             <a class="navbar-brand" href="index.html"><img src="img/abc_new.png"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<!--            <a class="navbar-brand" href="">Hey <span style="color:#1ebba3;"> Welcome Back</span> How is your <span style="color:#1ebba3;">Pet</span></a>-->
+            <!--            <a class="navbar-brand" href="">Hey <span style="color:#1ebba3;"> Welcome Back</span> How is your <span style="color:#1ebba3;">Pet</span></a>-->
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                 <span class="navbar-toggler-icon"></span>
@@ -109,7 +108,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="petregister.php">Pet-Register</a>
                     </li>
-                     <li class="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link" href="">Logout</a>
                     </li>
                 </ul>
@@ -209,7 +208,7 @@
     */
     ?>
     </div>
-    </div>
+
 </body>
 
 </html>
