@@ -1,3 +1,55 @@
+<?php
+    include 'conn_file.php';
+            
+    if(isset($_POST['Signup']))
+    {
+        $Pass=$_POST['Password'];
+        $Name=$_POST['Name'];
+        $Phone=$_POST['Phone'];
+        $Street=$_POST['Street'];
+        $City=$_POST['City'];
+        $State=$_POST['State'];
+        
+        
+        $sqlp1="SELECT * FROM user_details WHERE Name='$Name' and Password='$Pass'";
+        
+        $resultp1=mysqli_query($conn,$sqlp1);
+ 
+        $count1=mysqli_num_rows($resultp1);
+     
+   //  echo $count1;
+        if($count1>0)
+        {
+            echo "<script language=\"JavaScript\">\n";
+            echo "alert('Username already exists.');\n";
+            echo "window.location='UserRegistration.php.'";
+            echo "</script>";
+        }
+        else
+        {
+            $qry="insert into user_details (Password,Name,Phone,Street,City,State) values('$Pass','$Name','$Phone','$Street','$City','$State')";
+        
+            $ret=mysqli_query($conn,$qry);
+        
+            if($ret)
+            {
+                echo "<script language=\"JavaScript\">\n";
+                echo "alert('User Successfully Registered! You will be now redircted to Login Page');\n";
+                echo "window.location='login.php.'";
+                echo "</script>";
+              //  exit;
+            }
+            else
+            {
+                die("ERROR ".mysqli_error($conn));
+            }
+            /*header("Location: search.php");// to user homepage */
+        }
+    }
+
+?>
+
+
 <!DOCTYPE html>
 <html>
     <?php include 'conn_file.php'; ?>
@@ -108,7 +160,7 @@
         <!-- end vavigation-->
        
         <div class="col-12 narrow text-center login-box">
-        <form action="login.php" method="post">
+        <form action="#" method="post">
         <h1>Sign-Up</h1>
         <div class ="textbox">
         <!--        <i class="fas fa-user fa-3x " aria-hidden="true"></i>-->
@@ -116,11 +168,11 @@
         </div>
         <div class ="textbox">
         <!--        <i class="fas fa-lock fa-3x" aria-hidden="true"></i>-->
-        <input type="password" placeholder="Password" name="Password" value="">
+        <input type="password" placeholder="Password" name="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 and maximum 16" required value="">
         </div>
         <div class ="textbox">
         <!--        <i class="fas fa-lock fa-3x" aria-hidden="true"></i>-->
-        <input type="text" placeholder="Phone" name="Phone" value="">
+        <input type="text" placeholder="Phone" name="Phone" value="" pattern="[789][0-9]{9}" maxlength="10" title="Invalid phone number (Phone number less than or greater than 10)" required data-validation-required-message="Please enter your Phone Number.">
         </div>
         <div class ="textbox">
         <!--        <i class="fas fa-lock fa-3x" aria-hidden="true"></i>-->
