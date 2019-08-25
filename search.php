@@ -1,3 +1,17 @@
+<?php
+session_start();
+include("conn_file.php");
+#------------------------------------------------------------------------------------------------------------------------------
+//$u_email=$_SESSION['email'];// session Email
+//$u_email=$_SESSION['email'];// session Email
+
+if(!isset($_SESSION['username'])) 
+	 header("Location: login.php"); 
+else{
+	$user=$_SESSION['username'];
+}
+#-----------------------------------------------------------------------------------------------------------------------
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -41,7 +55,6 @@
     </style>
  </head>
     <?php
-include 'conn_file.php';
 
     if(isset($_POST['Pregister']))
     {
@@ -127,7 +140,7 @@ include 'conn_file.php';
     <div id="home">
 <!--        navigation-->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top ">
-        <a class="navbar-brand" href="">Welcome How is your Pet</a>
+        <a class="navbar-brand" href="">Welcome <?php echo $user; ?>  How is your Pet</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive">
             <span class="navbar-toggler-icon"></span>
