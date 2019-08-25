@@ -143,7 +143,7 @@
        
         <div class="col-12 narrow text-center login-box">
         <form action="search.php" method="post">
-        <h1>Login</h1>
+        <h1>Sign-in</h1>
         <div class ="textbox">
         <!--        <i class="fas fa-user fa-3x " aria-hidden="true"></i>-->
         <input type="text" placeholder="Username" name="Name" value="">
