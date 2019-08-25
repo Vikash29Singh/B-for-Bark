@@ -1,38 +1,3 @@
-<?php
-    include 'conn_file.php';
-            
-    if(isset($_POST['Signup']))
-    {
-        $Pass=$_POST['Password'];
-        $Name=$_POST['Name'];
-        $Phone=$_POST['Phone'];
-        $Street=$_POST['Street'];
-        $City=$_POST['City'];
-        $State=$_POST['State'];
-        
-  //      echo "HELLO";
-    //    echo $Pass;
-      //  echo $Phone;
-        //echo $City;
-        
-        $qry="insert into user_details (Password,Name,Phone,Street,City,State) values('$Pass','$Name','$Phone','$Street','$City','$State')";
-            
-        $ret=mysqli_query($conn,$qry);
-        
-        if($ret)
-        {
-            echo "SUCCESSFULL CREATION";
-        //    header("gallery.php"); 
-          //  exit;
-        }
-        else
-        {
-            die("ERROR ".mysqli_error($conn));
-        }
-        
-        
-    }
-?>
 
 <!DOCTYPE html>
 <html>
@@ -142,7 +107,7 @@
     </nav>
        
         <div class="col-12 narrow text-center login-box">
-        <form action="search.php" method="post">
+        <form action="login1.php" method="post">
         <h1>Login</h1>
         <div class ="textbox">
         <!--        <i class="fas fa-user fa-3x " aria-hidden="true"></i>-->
