@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 include ('conn_file.php');
  if(isset($_POST['Login']))
     {
@@ -8,7 +8,7 @@ include ('conn_file.php');
  $password=$_POST['Password']; 
 			  
 //admin Login
- $_SESSION['username']=$username;// session Email
+// $_SESSION['username']=$username;// session Email
 
 $sqlp1="SELECT * FROM user_details WHERE Name='$username' and Password='$password'";
 
@@ -19,11 +19,17 @@ $sqlp1="SELECT * FROM user_details WHERE Name='$username' and Password='$passwor
    //  echo $count1;
               if($count1>0)
               {
-                  $id=mysqli_fetch_assoc($conn,$resultp1);
-                    
+                  $id=mysqli_fetch_assoc($resultp1);
+                  if($id)
+                  {
                     session_start();
-                    $_SESSION["ID"]=$id;
+                    $_SESSION["USER_NAME"]=$id['Name'];
                  header("Location: search.php");// to user homepage
+                  }
+                  else
+                  {
+                      echo mysqli_error($conn);
+                  }
               }
               else
                  {
