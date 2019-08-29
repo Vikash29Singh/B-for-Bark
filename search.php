@@ -5,11 +5,13 @@ include("conn_file.php");
 //$u_email=$_SESSION['email'];// session Email
 //$u_email=$_SESSION['email'];// session Email
 
+/*
 if(!isset($_SESSION['username'])) 
 	 header("Location: login.php"); 
 else{
 	$user=$_SESSION['username'];
 }
+*/
 #-----------------------------------------------------------------------------------------------------------------------
 ?>
 
@@ -390,45 +392,20 @@ else{
     }
     
     ?>
-    
-<?php    
-//if(isset($_POST['Login']))
-//        {
-//            
-//            $name=$_POST['Name'];
-//            $pass=$_POST['Password'];
-//            
-//            $qry2="select * from user_details where Name='$name'
-//                    and Password='$pass'";
-//            $ret2=mysqli_query($conn,$qry2);
-//            
-//            if($ret2)
-//            {
-//                $row=mysqli_fetch_assoc($ret2);
-//                if($row > 0)
-//                {
-//                    echo "USER FOUND";
-//                }
-//                else
-//                {
-//                    echo "NO USER FOUND";
-//                }
-//            }
-//            else
-//            {
-//                echo "error".mysqli_error($conn);
-//            }
-//        }
-            
-?>
+  
 
 <body data-spy="scroll" data-target="#navbarResponsive" translate="no">
     <!--    home section-->
+    
+                    
+                    
+                
+    
     <div id="home">
         <!--        navigation-->
         <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top ">
             <a class="navbar-brand" href="index.php"><img src="img/abc_new.png"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a class="navbar-brand" href="">Hey <span style="color:#1ebba3;"> <?php echo $user; ?> Welcome Back</span> How is your <span style="color:#1ebba3;">Pet</span></a>
+            <a class="navbar-brand" href="">Hey <span style="color:#1ebba3;"> <?php echo $_SESSION["USER_NAME"]; ?> Welcome Back</span> How is your <span style="color:#1ebba3;">Pet</span></a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                 <span class="navbar-toggler-icon"></span>
