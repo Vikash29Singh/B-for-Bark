@@ -52,6 +52,12 @@
                 if($row > 0)
                 {
                     echo "USER FOUND";
+                    
+                    $id=mysqli_fetch_assoc($conn,$ret2);
+                    
+                    session_start();
+                    $_SESSION["ID"]=$id;
+                    
                 }
                 else
                 {
