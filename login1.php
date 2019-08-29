@@ -19,6 +19,10 @@ $sqlp1="SELECT * FROM user_details WHERE Name='$username' and Password='$passwor
    //  echo $count1;
               if($count1>0)
               {
+                  $id=mysqli_fetch_assoc($conn,$resultp1);
+                    
+                    session_start();
+                    $_SESSION["ID"]=$id;
                  header("Location: search.php");// to user homepage
               }
               else
