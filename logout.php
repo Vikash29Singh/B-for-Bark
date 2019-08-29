@@ -1,6 +1,7 @@
 <?php
 session_start();
-unset($_SESSION["username"]);
-unset($_SESSION["astatus"]);
-header("Location: index.html");
+unset($_SESSION["USER_NAME"]);
+//unset($_SESSION["astatus"]);
+session_destroy();
+header("Location: index.php");
 ?>
