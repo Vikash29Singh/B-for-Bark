@@ -1,17 +1,18 @@
 <?php
 session_start();
 include("conn_file.php");
+
+
 #------------------------------------------------------------------------------------------------------------------------------
 //$u_email=$_SESSION['email'];// session Email
 //$u_email=$_SESSION['email'];// session Email
 
-/*
-if(!isset($_SESSION['username'])) 
+
+if(!isset($_SESSION['USER_NAME'])) 
 	 header("Location: login.php"); 
 else{
-	$user=$_SESSION['username'];
+	$user=$_SESSION['USER_NAME'];
 }
-*/
 #-----------------------------------------------------------------------------------------------------------------------
 ?>
 
