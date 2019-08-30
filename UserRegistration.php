@@ -5,6 +5,7 @@
     {
         $Pass=$_POST['Password'];
         $Name=$_POST['Name'];
+        $Email=$_POST['Email'];
         $Phone=$_POST['Phone'];
         $Street=$_POST['Street'];
         $City=$_POST['City'];
@@ -27,7 +28,7 @@
         }
         else
         {
-            $qry="insert into user_details (Password,Name,Phone,Street,City,State) values('$Pass','$Name','$Phone','$Street','$City','$State')";
+            $qry="insert into user_details (Password,Name,Email,Phone,Street,City,State) values('$Pass','$Name','$Email','$Phone','$Street','$City','$State')";
         
             $ret=mysqli_query($conn,$qry);
         
@@ -177,8 +178,15 @@
         <h1>Sign-Up</h1>
         <div class ="textbox">
         <!--        <i class="fas fa-user fa-3x " aria-hidden="true"></i>-->
-        <input type="text" placeholder="Username" name="Name" value="">
+        <input type="text" placeholder="Username" name="Name" value="" required>
+       
         </div>
+<div class ="textbox">
+        <!--        <i class="fas fa-user fa-3x " aria-hidden="true"></i>-->
+        <input type= "email" placeholder="Email" name="Email" title="Please input a valid format for email." required value="">
+       
+        </div>
+            
         <div class ="textbox">
         <!--        <i class="fas fa-lock fa-3x" aria-hidden="true"></i>-->
         <input type="password" placeholder="Password" name="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 and maximum 16" required value="">
@@ -189,15 +197,15 @@
         </div>
         <div class ="textbox">
         <!--        <i class="fas fa-lock fa-3x" aria-hidden="true"></i>-->
-        <input type="text" placeholder="Street" name="Street" value="">
+        <input type="text" placeholder="Street" name="Street" required value="">
         </div>
         <div class ="textbox">
         <!--        <i class="fas fa-lock fa-3x" aria-hidden="true"></i>-->
-        <input type="text" placeholder="City" name="City" value="">
+        <input type="text" placeholder="City" name="City" required value="">
         </div>
         <div class ="textbox">
         <!--        <i class="fas fa-lock fa-3x" aria-hidden="true"></i>-->
-        <input type="text" placeholder="State" name="State" value="">
+        <input type="text" placeholder="State" name="State" required value="">
         </div>
         
        
