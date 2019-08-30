@@ -183,7 +183,7 @@
         </div>
 <div class ="textbox">
         <!--        <i class="fas fa-user fa-3x " aria-hidden="true"></i>-->
-        <input type= "email" placeholder="Email" name="Email" title="Please input a valid format for email." required value="">
+        <input type= "email" placeholder="Email" name="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 3}$" title="Please input a valid format for email." required value="">
        
         </div>
             
