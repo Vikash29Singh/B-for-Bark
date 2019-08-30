@@ -1,207 +1,93 @@
-<html>
+<?php
+session_start();
+//include("conn_file.php");
+
+
+#------------------------------------------------------------------------------------------------------------------------------
+//$u_email=$_SESSION['email'];// session Email
+//$u_email=$_SESSION['email'];// session Email
+
+
+if(!isset($_SESSION['USER_NAME'])) 
+	 header("Location: login.php"); 
+else{
+	$user=$_SESSION['USER_NAME'];
+}
+#-----------------------------------------------------------------------------------------------------------------------
+?>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Health card</title>
+    <title>Disease Recognition System</title>
     <link rel="stylesheet" href="bootstrap-4.1.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/fixed.css">
+    <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+    <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <style>
-    @import "compass/css3";
-
-/*
-
-RESPONSTABLE 2.0 by jordyvanraaij
-  Designed mobile first!
-
-If you like this solution, you might also want to check out the 1.0 version:
-  https://gist.github.com/jordyvanraaij/9069194
-
-*/
-/* Default options for table style*/
-$table-breakpoint: 480px;
-$table-background-color: #FFF;
-$table-text-color: #024457;
-$table-outer-border: 1px solid #167F92;
-$table-cell-border: 1px solid #D9E4E6;
-
-/* Extra options for table style (parse these arguments when including your mixin)*/
-$table-border-radius: 10px;
-$table-highlight-color: #EAF3F3;
-$table-header-background-color: #167F92;
-$table-header-text-color: #FFF;
-$table-header-border: 1px solid #FFF;
-
-/*The Responstable mixin*/
-
-@mixin responstable(
-  $breakpoint: $table-breakpoint,
-  $background-color: $table-background-color,
-  $text-color: $table-text-color,
-  $outer-border: $table-outer-border,
-  $cell-border: $table-cell-border,
-  $border-radius: none,
-  $highlight-color: none,
-  $header-background-color: $table-background-color,
-  $header-text-color: $table-text-color,
-  $header-border: $table-cell-border) {
-  
-  .responstable {
-    margin: 1em 0;
-    width: 100%;
-    overflow: hidden;  
-    background: $background-color;
-    color: $text-color;
-    border-radius: $border-radius;
-    border: $outer-border;
-  
-    tr {
-      border: $cell-border; 
-      &:nth-child(odd) { 
-/*           highlight the odd rows with a color*/
-          
-        background-color: $highlight-color;
-      }  
-    }
-  
-    th {
-      display: none; 
-/*         hide all the table header for mobile*/
-      border: $header-border;
-      background-color: $header-background-color;
-      color: $header-text-color;
-      padding: 1em;  
-      &:first-child { 
-/*          show the first table header for mobile*/
-        display: table-cell;
-        text-align: center;
-      }
-      &:nth-child(2) { 
-/*          show the second table header but replace the content with the data-th from the markup for mobile*/
-        display: table-cell;
-        span {display:none;}
-        &:after {content:attr(data-th);}
-      }
-      @media (min-width: $breakpoint) {
-        &:nth-child(2) { 
-/*            hide the data-th and show the normal header for tablet and desktop*/
-          span {display: block;}
-          &:after {display: none;}
-        }
-      }
-    }
-  
-    td {
-      display: block; 
-/*        display the table data as one block for mobile*/
-      word-wrap: break-word;
-      max-width: 7em;
-      &:first-child { 
-        display: table-cell; 
-/*          // display the first one as a table cell (radio button) for mobile*/
-        text-align: center;
-        border-right: $cell-border;
-      }
-      @media (min-width: $breakpoint) {
-        border: $cell-border;
-      }
-    }
-  
-    th, td {
-      text-align: left;
-      margin: .5em 1em;  
-      @media (min-width: $breakpoint) {
-        display: table-cell; 
-/*          // show the table as a normal table for tablet and desktop*/
-        padding: 1em;
-      }
-    }  
-  }    
-}
-
-/*// Include the mixin (with extra options as overrides)*/
-
-@include responstable(
-  $border-radius: $table-border-radius,
-  $highlight-color: $table-highlight-color,
-  $header-background-color: $table-header-background-color,
-  $header-text-color: $table-header-text-color,
-  $header-border: $table-header-border);
-
-/*// General styles*/
-
-body {
-  padding: 0 2em;
-  font-family: Arial, sans-serif;
-  color: #024457;
-  background: #f2f2f2;
-}
-
-h1 {
-  font-family: Verdana;
-  font-weight: normal;
-  color: #024457;
-  span {color: #167F92;}
-}
-
-
-
-
-
-
-
 
     </style>
 </head>
 
-<body>
 
-    <h1>Responstable <span>2.0</span> by <span>jordyvanraaij</span></h1>
 
-    <table class="responstable">
+<body data-spy="scroll" data-target="#navbarResponsive" translate="no">
+    <!--    home section-->
 
-        <tr>
-            <th>Main driver</th>
-            <th data-th="Driver details"><span>First name</span></th>
-            <th>Surname</th>
-            <th>Date of birth</th>
-            <th>Relationship</th>
-        </tr>
 
-        <tr>
-            <td><input type="radio" /></td>
-            <td>Steve</td>
-            <td>Foo</td>
-            <td>01/01/1978</td>
-            <td>Policyholder</td>
-        </tr>
+    <?php/* echo $_SESSION["USER_NAME"];            */?>
 
-        <tr>
-            <td><input type="radio" /></td>
-            <td>Steffie</td>
-            <td>Foo</td>
-            <td>01/01/1978</td>
-            <td>Spouse</td>
-        </tr>
 
-        <tr>
-            <td><input type="radio" /></td>
-            <td>Stan</td>
-            <td>Foo</td>
-            <td>01/01/1994</td>
-            <td>Son</td>
-        </tr>
+    <div id="home">
+        <!--        navigation-->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top ">
+            <a class="navbar-brand" href="index.php"><img src="img/abc_new.png"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <!--            <a class="navbar-brand" href="">Hey <span style="color:#1ebba3;"> <?php echo $user; ?> Welcome,,,,, Back</span> How is your <span style="color:#1ebba3;">Pet</span></a>-->
+            <a class="navbar-brand" href="">Hey <span style="color:#1ebba3;"> <?php echo $_SESSION["USER_NAME"]; ?> Welcome Back</span> How is your <span style="color:#1ebba3;">Pet</span></a>
 
-        <tr>
-            <td><input type="radio" /></td>
-            <td>Stella</td>
-            <td>Foo</td>
-            <td>01/01/1992</td>
-            <td>Daughter</td>
-        </tr>
 
-    </table>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.php">Home</a>
+                    </li>
+                    <li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="healthcard.php">Health card</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="petregister.php">Pet-Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="logout.php">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+
+
+
+
+
+
+
+
+
 </body>
 
 </html>
