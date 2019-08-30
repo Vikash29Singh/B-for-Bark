@@ -135,7 +135,7 @@
                 </div>
                 <div class="textbox">
                     <!--        <i class="fas fa-lock fa-3x" aria-hidden="true"></i>-->
-                    <input type="password" placeholder="Password" name="Password" value="">
+                    <input type="password" placeholder="Password" name="Password" required value="">
                 </div>
                 <label>
                     <input type="checkbox" checked="checked" name="remember"> Remember me
