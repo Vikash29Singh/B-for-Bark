@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
-<?php include 'conn_file.php'; ?>
+<?php include 'conn_file.php';
+    session_start();
+    ?>
 
 <head>
     <meta charset="utf-8">
@@ -124,16 +126,33 @@
 
 
     <?php
-            $did=1;
-                $qry1="select * from disease_details where Disease_Id='$did'";
+    
+            $dname="common cold";
+                $qry1="select * from disease_details where Disease_Name='$dname'";
                 $q=mysqli_query($conn,$qry1);
         $dis=mysqli_fetch_assoc($q);
+        $did=$dis['Disease_Id'];
+        
+    $uname=$_SESSION["USER_NAME"];
+    
+        $qrn="select * from user_details where Name='$uname'";
+        $rrn=mysqli_query($conn,$qrn);
+        $a=mysqli_fetch_assoc($rrn);
+        $iid=$a['U_Id'];
+    $qrecom="insert into d_search (U_Id,Disease_Id) values ('$iid','$did')";
+    
+    $rrecom=mysqli_query($conn,$qrecom);
+        if($rrecom)
+        {
+            echo "done";
+        }
+    else
+    {
+        echo mysqli_error($conn);
+    }
     
     $qry2="select * from symptoms where Disease_Id='$did'";
-                $q2=mysqli_query($conn,$qry2);
-       
-    
-     
+                $q2=mysqli_query($conn,$qry2); 
     $qry3="select * from remedies where Disease_Id='$did'";
                 $q3=mysqli_query($conn,$qry3);
        
@@ -191,9 +210,10 @@
                     <p class="blog-text">
                         <?php
                 $i=1;
-                while ($row2 = mysqli_fetch_assoc($q3)) 
+                while ($row2 =mysqli_fetch_assoc($q3)) 
                             {
                                 echo $i. $row2["Remedies"];
+                                //echo $did;
                                 $i=$i+1;
                                 ?><br><?php
                             }
