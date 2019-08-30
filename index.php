@@ -201,7 +201,7 @@
                         <div class="col-md-8">
                             <blockquote>
                                 <i class="fas fa-quote-left"></i>
-                                Dogs are a tremendous gift to the world! They are amazingly sensitive, intuitive creatures.B for Bark is passionate about working towards it.
+                                Dogs are a tremendous gift to the world! They are amazingly sensitive, intuitive creatures.
                                 <hr class="clients-hr">
                                 <cite>&#8212;Eric,small bussiness Owner</cite>
 
@@ -217,7 +217,7 @@
                         <div class="col-md-8">
                             <blockquote>
                                 <i class="fas fa-quote-left"></i>
-                                Humans love their pet dogs in the same way as they do their children. B for Bark Equally love your Dogs and will ensure their Good Health.
+                                Humans love their pet dogs in the same way as they do their children.
                                 <hr class="clients-hr">
                                 <cite>&#8212;Rachel,Professional photogarpher</cite>
                             </blockquote>
