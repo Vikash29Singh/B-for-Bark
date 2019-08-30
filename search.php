@@ -431,7 +431,7 @@ else{
     <!--    home section-->
     
                     
-        <?php echo $_SESSION["USER_NAME"];            ?>
+        <?php/* echo $_SESSION["USER_NAME"];            */?>
                 
     
     <div id="home">
