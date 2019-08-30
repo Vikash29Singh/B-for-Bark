@@ -392,7 +392,7 @@ else{
     }
     
     ?>
-<<<<<<< HEAD
+
 
 <?php    
 //if(isset($_POST['Login']))
@@ -424,9 +424,8 @@ else{
 //        }
             
 ?>
-=======
-  
->>>>>>> 745abf48939307e4097a73b4ede62c696d146d69
+
+
 
 <body data-spy="scroll" data-target="#navbarResponsive" translate="no">
     <!--    home section-->
@@ -439,11 +438,9 @@ else{
         <!--        navigation-->
         <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top ">
             <a class="navbar-brand" href="index.php"><img src="img/abc_new.png"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<<<<<<< HEAD
             <a class="navbar-brand" href="">Hey <span style="color:#1ebba3;"> <?php echo $user; ?> Welcome Back</span> How is your <span style="color:#1ebba3;">Pet</span></a>
-=======
             <a class="navbar-brand" href="">Hey <span style="color:#1ebba3;"> <?php echo $_SESSION["USER_NAME"]; ?> Welcome Back</span> How is your <span style="color:#1ebba3;">Pet</span></a>
->>>>>>> 745abf48939307e4097a73b4ede62c696d146d69
+
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                 <span class="navbar-toggler-icon"></span>
