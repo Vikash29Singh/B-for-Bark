@@ -127,32 +127,32 @@
             <h1>Pet Registration</h1>
             <div class="textbox">
                 <!--        <i class="fas fa-user fa-3x " aria-hidden="true"></i>-->
-                <input type="text" placeholder="Pet Name" name="Pname" value="">
+                <input type="text" placeholder="Pet Name" name="Pname" required value="">
             </div>
 
             <div class="textbox">
                 <!--        <i class="fas fa-lock fa-3x" aria-hidden="true"></i>-->
-                <input type="text" placeholder="Breed" name="Pbreed" value="">
+                <input type="text" placeholder="Breed" name="Pbreed" required value="">
             </div>
             <div class="textbox">
                 <!--        <i class="fas fa-lock fa-3x" aria-hidden="true"></i>-->
-                <input type="text" placeholder="Age" name="Page" value="">
+                <input type="number" placeholder="Age" name="Page" required value="">
             </div>
             <div class="textbox">
                 <!--        <i class="fas fa-lock fa-3x" aria-hidden="true"></i>-->
-                <input type="text" placeholder="Weight" name="Pweight" value="">
+                <input type="number" placeholder="Weight" name="Pweight" required value="">
             </div>
             <div class="textbox">
                 <!--        <i class="fas fa-lock fa-3x" aria-hidden="true"></i>-->
-                <input type="text" placeholder="Blood-Group" name="Pbgroup" value="">
+                <input type="text" placeholder="Blood-Group" name="Pbgroup" required value="">
             </div>
             <div class="textbox">
                 <!--        <i class="fas fa-lock fa-3x" aria-hidden="true"></i>-->
-                <input type="text" placeholder="Allergies(seperate by ',')" name="Pallergies" value="">
+                <input type="text" placeholder="Allergies(seperate by ',')" name="Pallergies" required value="">
             </div>
             <div class="textbox">
                 <!--        <i class="fas fa-lock fa-3x" aria-hidden="true"></i>-->
-                <input type="text" placeholder="Medication(Seperate by',')" name="Pmedication" value="">
+                <input type="text" placeholder="Medication(Seperate by',')" name="Pmedication" required value="">
             </div>
 
 
