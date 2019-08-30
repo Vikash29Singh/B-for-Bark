@@ -491,7 +491,7 @@ else{
 -->
         <div class="container">
             <form action="diseasesym.php" method="post">
-                <input type="text" placeholder="Disease...">
+                <input type="text" name="Dname" placeholder="Disease...">
                 <div class="search"></div>
             </form>
         </div>
