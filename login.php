@@ -140,10 +140,26 @@
                 <label>
                     <input type="checkbox" checked="checked" name="remember"> Remember me
                 </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <span class="psw">New <a href="UserRegistration.php">User</a></span>
+                <u><span class="psw">New <a href="UserRegistration.php">User</a></span></u>
                 <br>
                 <br>
                 <button class="btn btn-secondary btn-md" href="search.html" target="_blank" name="Login">Sign-in</button>
+                
+                <div class="text-center p-t-12">
+					<u>
+                    <span class="txt1">
+						Forgot
+					</span>
+					<a class="txt2" href="forgotPass.php">
+						Password 
+                        </a></u>
+<!--
+					<a class="txt2" href="reset_password.php">
+						Reset password
+					</a>
+-->
+				</div>
+                
             </form>
 
             <?php    
