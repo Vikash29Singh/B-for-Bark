@@ -15,17 +15,27 @@
     <body>
     
         <?php
-            $did=1;
-                $qry1="select * from disease_details where Disease_Id='$did'";
+            $dname="common cold";
+                $qry1="select * from disease_details where Disease_Name='$dname'";
                 $q=mysqli_query($conn,$qry1);
         $dis=mysqli_fetch_assoc($q);
+        $did=$dis['Diseas_Id'];
+    
+    
+    $qrecom="insert into d_search ('U_Id','Disease_Id') values ('$_SESSION['USER_NAME']','$did')";
+    
+    $rrecom=mysqli_query($conn,$qrecom);
+    
+    
+    
+    
     
     $qry2="select * from symptoms where Disease_Id='$did'";
                 $q2=mysqli_query($conn,$qry2);
        
     
      
-    $qry3="select * from remedies where Disease_Id='$did'";
+    $qry3="select * from remedies where Disease_Name='$dname'";
                 $q3=mysqli_query($conn,$qry3);
        
     ?>

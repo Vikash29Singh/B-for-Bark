@@ -113,7 +113,7 @@
             background: none;
             color: black;
             font-size: 18px;
-            width: 150px;
+            width: 300px;
             float: left;
             margin: 0 10px;
         }

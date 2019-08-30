@@ -15,7 +15,6 @@ else{
 }
 #-----------------------------------------------------------------------------------------------------------------------
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,7 +44,7 @@ else{
         }
 
         body {
-            background:;
+            background: ;
         }
 
         .container {
@@ -393,7 +392,40 @@ else{
     }
     
     ?>
-  
+
+
+<?php    
+//if(isset($_POST['Login']))
+//        {
+//            
+//            $name=$_POST['Name'];
+//            $pass=$_POST['Password'];
+//            
+//            $qry2="select * from user_details where Name='$name'
+//                    and Password='$pass'";
+//            $ret2=mysqli_query($conn,$qry2);
+//            
+//            if($ret2)
+//            {
+//                $row=mysqli_fetch_assoc($ret2);
+//                if($row > 0)
+//                {
+//                    echo "USER FOUND";
+//                }
+//                else
+//                {
+//                    echo "NO USER FOUND";
+//                }
+//            }
+//            else
+//            {
+//                echo "error".mysqli_error($conn);
+//            }
+//        }
+            
+?>
+
+
 
 <body data-spy="scroll" data-target="#navbarResponsive" translate="no">
     <!--    home section-->
@@ -406,7 +438,9 @@ else{
         <!--        navigation-->
         <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top ">
             <a class="navbar-brand" href="index.php"><img src="img/abc_new.png"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="navbar-brand" href="">Hey <span style="color:#1ebba3;"> <?php echo $user; ?> Welcome Back</span> How is your <span style="color:#1ebba3;">Pet</span></a>
             <a class="navbar-brand" href="">Hey <span style="color:#1ebba3;"> <?php echo $_SESSION["USER_NAME"]; ?> Welcome Back</span> How is your <span style="color:#1ebba3;">Pet</span></a>
+
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                 <span class="navbar-toggler-icon"></span>
@@ -456,8 +490,10 @@ else{
         </div>
 -->
         <div class="container">
-            <input type="text" placeholder="Disease...">
-            <div class="search"></div>
+            <form action="diseasesym.php" method="post">
+                <input type="text" placeholder="Disease...">
+                <div class="search"></div>
+            </form>
         </div>
 
         <br>
@@ -468,8 +504,10 @@ else{
         <h4>Search&nbsp;&nbsp;&nbsp;for&nbsp;&nbsp;&nbsp;Symptoms </h4>
         <br>
         <div class="container1">
-            <input type="text" placeholder="Symptoms...">
-            <div class="search"></div>
+            <form action="diseasesym.php" method="post">
+                <input type="text" placeholder="Symptoms...">
+                <div class="search"></div>
+            </form>
         </div>
         <!--
         <div class="w3ls_banner_txt text-center ml-auto pr-xl-0 pr-sm-4 pr-5">
