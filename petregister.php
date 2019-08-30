@@ -127,7 +127,7 @@
             <h1>Pet Registration</h1>
             <div class="textbox">
                 <!--        <i class="fas fa-user fa-3x " aria-hidden="true"></i>-->
-                <input type="text" placeholder="Pet Name" name="Pname" pattern="[A-Za-z]{20}" title="Name cannot contain numbers or special characters." required value="">
+                <input type="text" placeholder="Pet Name" name="Pname" pattern="[A-Za-z]{,20}" title="Name cannot contain numbers or special characters." required value="">
             </div>
 
             <div class="textbox">
