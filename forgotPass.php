@@ -1,5 +1,123 @@
 <html>
-	<body bgcolor="lightgreen">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Login</title>
+    <link rel="stylesheet" href="bootstrap-4.1.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/fixed.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background-size: cover;
+            background-image: url(img/5.jpg);
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .login-box {
+            width: 500px;
+            position: absolute;
+            background-color: white;
+            opacity: 0.8;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: black;
+
+        }
+
+        .login-box h1 {
+            float: left;
+            font-size: 40px;
+            border-bottom: 6px solid #1ebba3;
+            margin-bottom: 50px;
+            padding: 13px 0;
+            border-radius: 2px;
+        }
+
+        .textbox {
+            width: 100%;
+            overflow: hidden;
+            font-size: 20px;
+            padding: 8px 0;
+            margin: 8px 0;
+            border-bottom: 1px solid #1ebba3;
+        }
+
+        .textbox i {
+            width: 60px;
+            float: left;
+            text-align: center;
+        }
+
+        .textbox input {
+            border: none;
+            outline: none;
+            background: none;
+            color: black;
+            font-size: 18px;
+            width: 300px;
+            float: left;
+            margin: 0 10px;
+        }
+
+        .btn {
+            width: 100%;
+            background: none;
+            border: 2px solid #1ebba3;
+            color: black;
+            padding: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            margin: 12px 0;
+        }
+
+    </style>
+</head>
+
+<body data-spy="scroll" data-target="#navbarResponsive">
+    <!--    home section-->
+    <div id="home">
+        <!--        navigation-->
+        <div id="home">
+            <!--        navigation-->
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top ">
+                <a class="navbar-brand" href="index.php"><img src="img/abc_new.png"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.php">Home</a>
+                        </li>
+                        <!--
+                        <li class="nav-item">
+                            <a class="nav-link" href="#features">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#resources">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#clients">Quotes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contacts">Contacts</a>
+                        </li>
+-->
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.php">Sign-in</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="UserRegistration.php">Sign-up</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
 <?php
     include 'conn_file.php';
 	if(!empty($_POST["forgot-password"]))
@@ -47,7 +165,7 @@ function validate_forgot()
 	return true
 }
 </script>
-<br><br><h3><li><a href="login.php" target="_self" >Back</a></li></h3>
+<!--<br><br><h3><li><a href="login.php" target="_self" >Back</a></li></h3>-->
 <form align="center" name="frmForgot" id="frmForgot" method="post" onSubmit="return validate_forgot();"><br><br><br><br>
 <h1>Forgot Password?</h1>
 	<?php if(!empty($success_message)) 
@@ -74,7 +192,8 @@ function validate_forgot()
 		<div><input type="text" name="user-email" id="user-email" class="input-field">
 		<input type="submit" name="forgot-password" id="forgot-password" value="Submit" class="form-submit-button">
 	</div>
-
+    </div>
 </form>
-	</body>
+    </div>
+    </body>
 </html>
