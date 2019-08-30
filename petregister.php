@@ -2,6 +2,7 @@
  File name:B for bark
  Date:21/6/19
 -->
+
 <!DOCTYPE html>
 <html>
 <?php include 'conn_file.php'; ?>
@@ -67,7 +68,7 @@
             background: none;
             color: black;
             font-size: 18px;
-            width: 300px;
+            width: 400px;
             float: left;
             margin: 0 10px;
         }
@@ -82,6 +83,7 @@
             cursor: pointer;
             margin: 12px 0;
         }
+
     </style>
 </head>
 
