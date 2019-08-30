@@ -127,24 +127,24 @@
             <h1>Pet Registration</h1>
             <div class="textbox">
                 <!--        <i class="fas fa-user fa-3x " aria-hidden="true"></i>-->
-                <input type="text" placeholder="Pet Name" name="Pname" required value="">
+                <input type="text" placeholder="Pet Name" name="Pname" pattern="[A-Za-z]{,16}" title="Name cannot contain numbers or special characters." required value="">
             </div>
 
             <div class="textbox">
                 <!--        <i class="fas fa-lock fa-3x" aria-hidden="true"></i>-->
-                <input type="text" placeholder="Breed" name="Pbreed" required value="">
+                <input type="text" placeholder="Breed" name="Pbreed" pattern="[A-Za-z]{,16}" title="Breed cannot contain numbers or special characters." required value="">
             </div>
             <div class="textbox">
                 <!--        <i class="fas fa-lock fa-3x" aria-hidden="true"></i>-->
-                <input type="number" placeholder="Age" name="Page" required value="">
+                <input type="number" placeholder="Age" name="Page" title="Age cannot contain alphabets or special characters." required value="">
             </div>
             <div class="textbox">
                 <!--        <i class="fas fa-lock fa-3x" aria-hidden="true"></i>-->
-                <input type="number" placeholder="Weight" name="Pweight" required value="">
+                <input type="number" placeholder="Weight" name="Pweight" title="Weight cannot contain alphabets or special characters." required value="">
             </div>
             <div class="textbox">
                 <!--        <i class="fas fa-lock fa-3x" aria-hidden="true"></i>-->
-                <input type="text" placeholder="Blood-Group" name="Pbgroup" required value="">
+                <input type="text" placeholder="Blood-Group" name="Pbgroup" maxlength="3" pattern="([AaBbOo]|[Aa][Bb])[\+-]" required value="">
             </div>
             <div class="textbox">
                 <!--        <i class="fas fa-lock fa-3x" aria-hidden="true"></i>-->
