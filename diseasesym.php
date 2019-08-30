@@ -127,7 +127,7 @@
 
     <?php
     
-            $dname="common cold";
+            $dname=$_POST['Dname'];
                 $qry1="select * from disease_details where Disease_Name='$dname'";
                 $q=mysqli_query($conn,$qry1);
         $dis=mysqli_fetch_assoc($q);
