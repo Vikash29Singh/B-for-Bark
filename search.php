@@ -381,8 +381,12 @@ else{
                 $qry102="insert into pet_medic values('$id','$medication[$i]')";
                 $r=mysqli_query($conn,$qry102);
             }
-            echo "Pet successfully Registered";
-        }
+                echo "<script language=\"JavaScript\">\n";
+                   echo "alert('Pet successfully Registered');\n";
+                   //echo "window.location='login.php.'";
+                   echo "</script>";
+            
+            }
         
         else
         {
