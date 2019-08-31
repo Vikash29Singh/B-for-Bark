@@ -101,17 +101,19 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php">Home</a>
+                        <a class="nav-link" href="search.php">Home</a>
                     </li>
                     <li>
+<!--
                     <li class="nav-item">
                         <a class="nav-link" href="search.php">Search</a>
                     </li>
+-->
                     <li class="nav-item">
                         <a class="nav-link" href="petregister.php">Pet-Register</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Logout</a>
+                        <a class="nav-link" href="logout.php">Logout</a>
                     </li>
                 </ul>
             </div>
