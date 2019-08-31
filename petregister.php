@@ -2,7 +2,9 @@
  File name:B for bark
  Date:21/6/19
 -->
-
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <?php include 'conn_file.php'; ?>
