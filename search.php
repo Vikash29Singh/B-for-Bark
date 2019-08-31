@@ -452,11 +452,11 @@ else{
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php">Home</a>
+                        <a class="nav-link" href="search.php">Home</a>
                     </li>
                     <li>
                     <li class="nav-item">
-                        <a class="nav-link" href="healthcard.php">Health card</a>
+                        <a class="nav-link" href="/B-for-Bark/Table/table.php">Health card</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="petregister.php">Pet-Register</a>
