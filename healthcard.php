@@ -1,5 +1,8 @@
 <html>
-<?php include 'conn_file.php';  ?>
+<?php include 'conn_file.php';  
+    
+session_start();
+    ?>
 
 <head>
     <meta charset="utf-8">
@@ -114,7 +117,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php">Home</a>
+                        <a class="nav-link" href="search.php">Home</a>
                     </li>
                     <!-- <li>
             <li class="nav-item">
@@ -129,6 +132,10 @@
                     <li class="nav-item">
                         <a class="nav-link" href="">History</a>
                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="logout.php">Logout</a>
+                    </li>
+                    
                 </ul>
             </div>
         </nav>
