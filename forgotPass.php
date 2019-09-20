@@ -189,7 +189,7 @@ function validate_forgot()
 	 -->
 	<div class="field-group">
 		<div><label for="email"><h3>Enter Your Email</h3></label></div>
-		<div><input type="text" name="user-email" id="user-email" class="input-field">
+		<div><input type="text" name="user-email" id="user-email" class="input-field" required>
 		<input type="submit" name="forgot-password" id="forgot-password" value="Submit" class="form-submit-button">
 	</div>
     </div>
