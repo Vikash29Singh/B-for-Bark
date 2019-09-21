@@ -36,7 +36,7 @@ $sqlp1="SELECT * FROM user_details WHERE Name='$username' and Password='$passwor
           
                    echo "<script language=\"JavaScript\">\n";
                    echo "alert('Invalid Username or password');\n";
-                   echo "window.location='login.php.'";
+                   echo "window.location='login.php'";
                    echo "</script>";
                  }
  }
