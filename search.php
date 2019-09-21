@@ -359,6 +359,15 @@ else{
         
         if($rn)
         {
+            $q="Select * from pet_details where Name='$pname' and Weight='$pweight'";
+            $ans=mysqli_query($conn,$q);
+            $anf=mysqli_fetch_assoc($ans);
+            $b=$_SESSION["USER_NAME"];
+            $pd=$anf['P_Id'];
+            $qpet="insert into user_pet values('$pd','$b')";
+            $dns=mysqli_query($conn,$qpet);
+            
+            
             $qry1="Select * from pet_details where Name='$pname' and Weight='$pweight'";
             $rn1=mysqli_query($conn,$qry1);
             $row=mysqli_fetch_assoc($rn1);
