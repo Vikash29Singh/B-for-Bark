@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Aug 30, 2019 at 06:15 PM
+-- Generation Time: Sep 21, 2019 at 06:58 AM
 -- Server version: 5.7.19
 -- PHP Version: 5.6.31
 
@@ -116,7 +116,7 @@ CREATE TABLE IF NOT EXISTS `d_search` (
   `Date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `Search_Id` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`Search_Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `d_search`
@@ -125,7 +125,39 @@ CREATE TABLE IF NOT EXISTS `d_search` (
 INSERT INTO `d_search` (`U_Id`, `Disease_Id`, `Date`, `Search_Id`) VALUES
 (17, 1, '2019-08-30 17:19:03', 1),
 (17, 1, '2019-08-30 17:19:29', 2),
-(17, 1, '2019-08-30 17:25:07', 3);
+(17, 1, '2019-08-30 17:25:07', 3),
+(17, 1, '2019-08-30 18:18:02', 4),
+(17, 1, '2019-08-30 18:19:05', 5),
+(17, 1, '2019-08-30 18:20:30', 6),
+(17, 1, '2019-08-30 18:23:30', 7),
+(17, 1, '2019-08-30 18:29:41', 8),
+(17, 1, '2019-08-30 18:29:56', 9),
+(17, 1, '2019-08-30 18:30:07', 10),
+(17, 1, '2019-08-30 18:31:14', 11),
+(17, 1, '2019-08-30 18:31:58', 12),
+(17, 1, '2019-08-30 18:32:03', 13),
+(17, 1, '2019-08-30 18:32:09', 14),
+(17, 2, '2019-08-30 18:40:58', 15),
+(17, 3, '2019-08-30 18:43:11', 16),
+(17, 2, '2019-08-31 03:51:02', 17),
+(17, 2, '2019-08-31 03:51:27', 18),
+(17, 3, '2019-08-31 04:00:22', 19),
+(17, 2, '2019-08-31 04:01:57', 20),
+(17, 2, '2019-08-31 04:03:17', 21),
+(17, 2, '2019-08-31 04:04:43', 22),
+(17, 2, '2019-08-31 04:04:55', 23),
+(17, 2, '2019-08-31 04:05:24', 24),
+(17, 2, '2019-08-31 04:06:19', 25),
+(17, 2, '2019-08-31 04:06:31', 26),
+(17, 2, '2019-08-31 04:18:02', 27),
+(17, 2, '2019-08-31 04:18:52', 28),
+(17, 2, '2019-08-31 05:39:22', 29),
+(17, 2, '2019-08-31 05:44:54', 30),
+(17, 2, '2019-08-31 05:48:07', 31),
+(17, 2, '2019-08-31 05:55:19', 32),
+(17, 3, '2019-08-31 05:55:33', 33),
+(9, 2, '2019-09-20 06:18:58', 34),
+(9, 3, '2019-09-20 06:25:13', 35);
 
 -- --------------------------------------------------------
 
@@ -172,7 +204,16 @@ INSERT INTO `pet_allergies` (`P_Id`, `Allergies`) VALUES
 (24, 'j'),
 (24, 'hj'),
 (25, 'skin'),
-(25, ' pollution');
+(25, ' pollution'),
+(26, 'bohot sari'),
+(26, ' paagal'),
+(27, 'skin allegies'),
+(27, ' nose'),
+(27, ''),
+(28, 'xzx'),
+(29, 'ashkbh'),
+(29, 'assa'),
+(29, 'sa');
 
 -- --------------------------------------------------------
 
@@ -201,7 +242,7 @@ CREATE TABLE IF NOT EXISTS `pet_details` (
   `Age` int(11) NOT NULL,
   `Weight` int(11) NOT NULL,
   PRIMARY KEY (`P_Id`)
-) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=30 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `pet_details`
@@ -219,7 +260,11 @@ INSERT INTO `pet_details` (`P_Id`, `Name`, `Breed`, `Blood_group`, `Age`, `Weigh
 (19, 'kkk', 'human', 'b-', 67, 67),
 (18, 'nithya', 'human', 'b+', 64, 93),
 (24, 'grb', 'bgr', 'b', 5, 56),
-(25, 'aman', 'mc', 'a+', 6, 52);
+(25, 'aman', 'mc', 'a+', 6, 52),
+(26, 'aman', 'mc', 'a+', 23, 5),
+(27, 'jojo', 'pug', 'a+', 5, 20),
+(28, '1121212', 'sdhh', 'a+', 23, 5),
+(29, 'mc', 'bc', 'a+', 8, 44);
 
 -- --------------------------------------------------------
 
@@ -243,7 +288,17 @@ INSERT INTO `pet_medic` (`P_Id`, `Medication`) VALUES
 (24, 'a'),
 (24, 'rf'),
 (25, 'piles'),
-(25, ' hygine problem');
+(25, ' hygine problem'),
+(26, 'piles'),
+(26, ' hygine problem'),
+(27, 'saas'),
+(27, 'asaas'),
+(27, 'as'),
+(28, 'xzxz'),
+(29, 'as'),
+(29, 'as'),
+(29, 'sd'),
+(29, 'sa');
 
 -- --------------------------------------------------------
 
@@ -320,7 +375,7 @@ CREATE TABLE IF NOT EXISTS `user_details` (
   `City` longtext NOT NULL,
   `State` longtext NOT NULL,
   PRIMARY KEY (`U_Id`)
-) ENGINE=MyISAM AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user_details`
@@ -338,7 +393,8 @@ INSERT INTO `user_details` (`U_Id`, `Password`, `Name`, `Email`, `Phone`, `Stree
 (20, 'aa@12Aaa', 'aa', 'ANILADVANI.16@GMAIL.C', 8766043767, 'B-19, DADU MARG BRAHMPURI KHURRA', 'JAIPUR', 'Rajasthan'),
 (21, 'saasAA123', 'saas', 'ANILADVANI.16@GMAIL.c', 8766043767, 'B-19, DADU MARG BRAHMPURI KHURRA', 'JAIPUR', 'Rajasthan'),
 (22, 'bhjhA123', 'asa@', 'bhj@gmail.com', 8766043767, 'buu', 'uhbh', 'ghyg'),
-(23, 'abcd1234A', 'saas', 'ANILADVANI.16@GMAIL.COM', 8766043767, 'B-19, DADU MARG BRAHMPURI KHURRA', 'JAIPUR', 'Rajasthan');
+(23, 'abcd1234A', 'saas', 'ANILADVANI.16@GMAIL.COM', 8766043767, 'B-19, DADU MARG BRAHMPURI KHURRA', 'JAIPUR', 'Rajasthan'),
+(24, '5645AS1a', 'saas', 'aas@a.com', 8766043767, 'B-19, DADU MARG BRAHMPURI KHURRA', 'JAIPUR', 'Rajasthan');
 
 -- --------------------------------------------------------
 
@@ -349,8 +405,15 @@ INSERT INTO `user_details` (`U_Id`, `Password`, `Name`, `Email`, `Phone`, `Stree
 DROP TABLE IF EXISTS `user_pet`;
 CREATE TABLE IF NOT EXISTS `user_pet` (
   `P_Id` int(11) NOT NULL DEFAULT '0',
-  `U_id` int(11) NOT NULL
+  `Name` varchar(50) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user_pet`
+--
+
+INSERT INTO `user_pet` (`P_Id`, `Name`) VALUES
+(29, 'jai');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
