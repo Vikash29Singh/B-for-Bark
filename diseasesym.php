@@ -103,17 +103,20 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php">Home</a>
+                        <a class="nav-link" href="search.php">Home</a>
                     </li>
                     <li>
                     <li class="nav-item">
-                        <a class="nav-link" href="healthcard.php">Health card</a>
+                        <a class="nav-link" href="/B-for-Bark/Table/table.php">Health card</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="petregister.php">Pet-Register</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="logout.php">Logout</a>
                     </li>
                 </ul>
             </div>
@@ -167,7 +170,7 @@
 
             <div class="col-md-4">
                 <div class="single-blog">
-                    <p class="blog-meta">Diseases<span>September 24,2018</span></p>
+                    <p class="blog-meta">Diseases<span>August 31,2019</span></p>
                     <img src="img/5.jpg">
                     <h2><a href="#">Here is the Disease Description specified by you</a></h2>
                     <p class="blog-text"><?php echo $dis['Disease_name'] ?>
@@ -182,7 +185,7 @@
             </div>
             <div class="col-md-4">
                 <div class="single-blog">
-                    <p class="blog-meta">Symptoms<span>September 24,2018</span></p>
+                    <p class="blog-meta">Symptoms<span>August 31,2019</span></p>
                     <img src="img/23.jpg">
                     <h2><a href="#">Here is the Symptoms for the Specified Disease</a></h2>
                     <p class="blog-text">
@@ -204,7 +207,7 @@
 
             <div class="col-md-4">
                 <div class="single-blog">
-                    <p class="blog-meta">Remedies<span>September 24,2018</span></p>
+                    <p class="blog-meta">Remedies<span>August 31,2019</span></p>
                     <img src="img/17.jpg">
                     <h2><a href="#">This is our help for you</a></h2>
                     <p class="blog-text">

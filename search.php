@@ -452,7 +452,7 @@ else{
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php">Home</a>
+                        <a class="nav-link" href="search.php">Home</a>
                     </li>
                     <li>
                     <li class="nav-item">
@@ -495,7 +495,7 @@ else{
 -->
         <div class="container">
             <form action="diseasesym.php" method="post">
-                <input type="text" name="Dname" placeholder="Disease...">
+                <input type="text" name="Dname" placeholder="Disease..." required>
                 <div class="search"></div>
             </form>
         </div>
@@ -509,7 +509,7 @@ else{
         <br>
         <div class="container1">
             <form action="diseasesym.php" method="post">
-                <input type="text" placeholder="Symptoms...">
+                <input type="text" placeholder="Symptoms..." required>
                 <div class="search"></div>
             </form>
         </div>

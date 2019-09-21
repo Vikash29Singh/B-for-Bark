@@ -108,20 +108,23 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php">Home</a>
+                        <a class="nav-link" href="/B-for-Bark/search.php">Home</a>
                     </li>
                     <li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Pets</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="healthcard.php">Health card</a>
+                        <a class="nav-link" href="table.php">Health card</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="petregister.php">Pet-Register</a>
+                        <a class="nav-link" href="/B-for-Bark/petregister.php">Pet-Register</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/B-for-Bark/logout.php">Logout</a>
                     </li>
                 </ul>
             </div>
