@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/fixed.css">
     <style>
         body {
+            
             margin: 0;
             padding: 0;
             font-family: sans-serif;
@@ -26,6 +27,7 @@
         }
 
         .login-box {
+            
             width: 500px;
             position: absolute;
             background-color: white;
@@ -38,6 +40,7 @@
         }
 
         .login-box h1 {
+            
             float: left;
             font-size: 40px;
             border-bottom: 6px solid #1ebba3;
