@@ -147,7 +147,7 @@
                 <span class="psw">New <a href="UserRegistration.php">User</a></span>
                 <br>
                 <br>
-                <button class="btn btn-secondary btn-md" href="search.html" target="_blank" name="Login">Sign-in</button>
+                <button class="btn btn-secondary btn-md" href="search.php" target="_blank" name="Login">Sign-in</button>
 
                 <div class="text-center p-t-12">
                     
