@@ -1,4 +1,5 @@
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -118,7 +119,7 @@
                 </div>
             </nav>
         </div>
-<?php
+        <?php
     include 'conn_file.php';
 	if(!empty($_POST["forgot-password"]))
 	{
@@ -153,47 +154,49 @@
 		}
 	}
 ?>
-<link href="demo-style.css" rel="stylesheet" type="text/css">
-<script>
-function validate_forgot() 
-{
-	if((document.getElementById("user-login-name").value == "") && (document.getElementById("Email").value == "")) 
-	{
-		document.getElementById("validation-message").innerHTML = "Login Email is required!"
-		return false;
-	}
-	return true
-}
-</script>
-<!--<br><br><h3><li><a href="login.php" target="_self" >Back</a></li></h3>-->
-<form align="center" name="frmForgot" id="frmForgot" method="post" onSubmit="return validate_forgot();"><br><br><br><br>
-<h1>Forgot Password?</h1>
-	<?php if(!empty($success_message)) 
-	{ ?>
-	<div class="success_message"><?php echo $success_message; ?></div>
-	<?php } ?>
+        <link href="demo-style.css" rel="stylesheet" type="text/css">
+        <script>
+            function validate_forgot() {
+                if ((document.getElementById("user-login-name").value == "") && (document.getElementById("Email").value == "")) {
+                    document.getElementById("validation-message").innerHTML = "Login Email is required!"
+                    return false;
+                }
+                return true
+            }
 
-	<div id="validation-message">
-		<?php if(!empty($error_message)) 
+        </script>
+        <!--<br><br><h3><li><a href="login.php" target="_self" >Back</a></li></h3>-->
+        <form align="center" name="frmForgot" id="frmForgot" method="post" onSubmit="return validate_forgot();"><br><br><br><br>
+            <h1>Forgot Password?</h1>
+            <?php if(!empty($success_message)) 
+	{ ?>
+            <div class="success_message"><?php echo $success_message; ?></div>
+            <?php } ?>
+
+            <div id="validation-message">
+                <?php if(!empty($error_message)) 
 		{ ?>
-	<?php echo $error_message; ?>
-	<?php
+                <?php echo $error_message; ?>
+                <?php
  }
   ?>
-	</div>
+            </div>
 
-	<!-- <div class="field-group">
+            <!-- <div class="field-group">
 		<div><label for="username">Username</label></div>
 		<div><input type="text" name="user-login-name" id="user-login-name" class="input-field"> Or</div>
 	</div>
 	 -->
-	<div class="field-group">
-		<div><label for="email"><h3>Enter Your Email</h3></label></div>
-		<div><input type="text" name="user-email" id="user-email" class="input-field" required>
-		<input type="submit" name="forgot-password" id="forgot-password" value="Submit" class="form-submit-button">
-	</div>
+            <div class="field-group">
+                <div><label for="email">
+                        <h3>Enter Your Email</h3>
+                    </label></div>
+                <div><input type="text" name="user-email" id="user-email" class="input-field" required>
+                    <input type="submit" name="forgot-password" id="forgot-password" value="Submit" class="form-submit-button">
+                </div>
+            </div>
+        </form>
     </div>
-</form>
-    </div>
-    </body>
+</body>
+
 </html>
