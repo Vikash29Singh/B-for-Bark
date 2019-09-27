@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php 
+    include 'D:/wamp64/www/B-for-Bark/conn_file.php';  
+    
+    session_start();
+?>
+    
 <head>
     <title>Table </title>
     <meta charset="UTF-8">
@@ -142,10 +148,102 @@
         <ul>
             <li><a class="nav-link" href="#">PETS</a>
             <ul>
-                <li><a class="nav-link" href="#">PET 1</a></li>
-                <li><a class="nav-link" href="#">PET 2</a></li>
-                <li><a class="nav-link" href="#">PET 3</a></li>
+                
+                <?php
+          /*          
+                Table users:
+    user_id (pk, ai)
+    email
+    password
+    last_login
 
+Table data:
+    user_id (fk to users.user_id)
+    data_1
+    data_2
+    
+    SELECT users.email, users.password, data.data_1, data.data_2
+FROM users,data 
+WHERE users.email='$user_email' AND users.user_id=data.user_id";
+       
+                
+                    $fetch1 = "SELECT user_pet.P_Id, pet_details.Name FROM user_pet, pet_details WHERE user_pet.P_Id = pet_details.P_Id";
+                    $result = mysqli_query($conn,$fetch1);
+                    
+                    
+                    while($row = mysqli_fetch_array($result))
+                    {
+                    echo "<tr>";
+                    echo "<td>" . $row['Name'] . "</td>";
+                    //echo "<td>" . $row['Breed'] . "</td>";
+                    echo "</tr>";
+                    }
+                    echo "</table>";
+
+                */?>
+                
+                <li><a class="nav-link" href="#"><?php
+          /*          
+                Table users:
+    user_id (pk, ai)
+    email
+    password
+    last_login
+
+Table data:
+    user_id (fk to users.user_id)
+    data_1
+    data_2
+    
+    SELECT users.email, users.password, data.data_1, data.data_2
+FROM users,data 
+WHERE users.email='$user_email' AND users.user_id=data.user_id";
+        */
+                    
+                    $fetch1 = "SELECT user_pet.P_Id, pet_details.Name FROM user_pet, pet_details WHERE user_pet.P_Id = pet_details.P_Id";
+                    $result = mysqli_query($conn,$fetch1);
+                    
+                    $c = 0;
+                    //$row = mysqli_fetch_array($result)
+                    $array=array();
+                    
+                    $size=mysqli_num_rows($result);
+                    
+                    
+                    while($row = mysqli_fetch_assoc($result))
+                    {
+
+                    // add each row returned into an array
+                    $array[] = $row;
+                    $c++;
+                    }
+                    
+                    for($i=0;$i<$size;$i++)
+                    {
+                    echo "<tr>";
+                    echo "<td>" . $row['Name'] . "</td>";
+                    echo "<br>";
+                    //echo "<td>" . $row['Breed'] . "</td>";
+                    echo "</tr>";
+                    
+                    
+
+                ?></a></li>
+                <li><a class="nav-link" href="#">
+                    <?php echo "<tr>";
+                    echo "<td>" . $row['Name'] . "</td>";
+                    echo "<br>";
+                    //echo "<td>" . $row['Breed'] . "</td>";
+                    echo "</tr>"; ?> </a></li>
+                <li><a class="nav-link" href="#"><?php echo "<tr>";
+                    echo "<td>" . $row['Name'] . "</td>";
+                    echo "<br>";
+                    //echo "<td>" . $row['Breed'] . "</td>";
+                    echo "</tr>"; ?></a></li>
+                    <?php
+                    }
+                    echo "</table>";
+                        ?>
 
             </ul>
             </li>
