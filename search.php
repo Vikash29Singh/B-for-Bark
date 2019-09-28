@@ -27,6 +27,12 @@ else{
     <link rel="stylesheet" href="css/fixed.css">
     <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
     <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+
+
+
 
     <style>
         @import url("https://fonts.googleapis.com/css?family=Inconsolata:700");
@@ -689,39 +695,49 @@ else{
         <div class="col-12 narrow text-center">
             <h1>Food Suggestion of the Month.</h1>
             <p class="lead">The dogs should be friendly,outgoing,healthy,well-groomed and love to be fussed. All breeds, crossbreeds, shapes and sizes are welcome.</p>
-            <div class="slideshow-container">
-
-                <!-- Full-width images with number and caption text -->
-                <div class="mySlides fade">
-                    <div class="numbertext">1 / 3</div>
-                    <img src="/imp1/B-for-Bark/img/13.jpg" style="width:100%">
-                    <div class="text">Caption Text</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <div class="numbertext">2 / 3</div>
-                    <img src="/imp1/B-for-Bark/img/doctor.jpg" style="width:100%">
-                    <div class="text">Caption Two</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <div class="numbertext">3 / 3</div>
-                    <img src="/imp1/B-for-Bark/img/bg.jpg" style="width:100%">
-                    <div class="text">Caption Three</div>
-                </div>
-
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            </div>
             <br>
-
-            <!-- The dots/circles -->
-            <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
+            <div class="bd-example">
+                <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/10.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>First slide label</h5>
+                                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/11.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Second slide label</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/12.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Third slide label</h5>
+                                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
             </div>
+
+
 
 
         </div>
