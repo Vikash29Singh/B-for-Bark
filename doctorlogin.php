@@ -21,7 +21,7 @@
             padding: 0;
             font-family: sans-serif;
             background-size: cover;
-            background-image: url(img/19.jpg);
+            background-image: url(img/34.jpg);
             max-width: 100%;
             max-height: 100%;
         }
