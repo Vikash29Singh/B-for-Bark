@@ -694,7 +694,7 @@ else{
     <div id="clients" class="offset">
          <div class="col-12 narrow text-center">
             <h1>Trend Analysis</h1>
-            <p class="lead">The disease which are specified below are the diseases which are curretly trending in this season . Make sure your Pet is not suffering from this disease.</p>
+            <p class="lead">The disease which are specified below are the diseases which are currently trending in this season . Make sure your Pet is not suffering from this disease.</p>
              <br>
              <p class="lead">PRECAUTION IS ALWAYS BETTER THAN CURE</p>
         </div>
