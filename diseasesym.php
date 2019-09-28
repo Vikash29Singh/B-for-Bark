@@ -138,6 +138,7 @@
                 $q=mysqli_query($conn,$qry1);
         $dis=mysqli_fetch_assoc($q);
         $did=$dis['Disease_Id'];
+        $_SESSION['DID']=$did;
         
     $uname=$_SESSION["USER_NAME"];
     
@@ -288,10 +289,24 @@
     </div>
     <article>
         <center>
-            <h3>Sample</h3>
+            <h3>SUGGESTED DOCTORS</h3>
         </center>
         <center>
-            <p>Something that corrects or counteracts. (law) The legal means to recover a right or to prevent or obtain redress for a wrong. A medicine, application, or treatment that relieves or cures a disease.</p>
+            <p>
+            <?php
+                $did=$_SESSION['DID'];
+            $qi="select * from doctor_details where speciality=(select Disease_type from disease_details where Disease_Id='$did')";
+                $da=mysqli_query($conn,$qi);
+                
+                while($drow=mysqli_fetch_assoc($da))
+                {
+                    echo $drow['Doc_name'];
+                }
+            
+            
+            
+            ?>
+            </p>
         </center>
         <p></p>
     </article>
