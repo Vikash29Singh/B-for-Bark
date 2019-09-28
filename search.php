@@ -711,22 +711,9 @@ else{
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-<!--                            <img src="img/food2.jpg"width="250" height="300">-->
-                            <img src="img/food2.jpg" class="d-block w-100"alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>INGREDIENTS</h5>
-<!--
-                                <p>1 1/2 cups brown rice</p><br>
-                                <p>1 tablespoon olive oil</p><br>
--->
-                                <p>3 pounds ground turkey</p><br>
-                                <p>3 cups baby spinach, chopped</p><br>
-                                <p>2 carrots, shredded</p><br>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
+                            <!--                            <img src="img/food2.jpg"width="250" height="300">-->
                             <img src="img/food1.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
+                           <div class="carousel-caption d-none d-md-block">
                                 <h5>INGREDIENTS</h5>
                                 <p>3 lbs lean ground chicken</p><br>
                                 <p>1 cup butternut squash (I use frozen, precut)</p><br>
@@ -736,15 +723,29 @@ else{
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="img/food3.jpg" class="d-block w-100" alt="...">
-<!--                            <img src="img/food3.jpg"width="500" height="400">-->-->
-                            <div class="carousel-caption d-none d-md-block">
-<!--                                <h5>INGREDIENTS</h5>-->
+                            <img src="img/food9.png" class="d-block w-100" alt="...">
+                           
+                              <div class="carousel-caption d-none d-md-block">
+                                <h5>INGREDIENTS</h5>
+                                <!--
                                 <p>1 1/2 cups brown rice</p><br>
-<p>1 tablespoon olive oil</p><br>
-<p>3 pounds ground turkey</p><br>
-<p>3 cups baby spinach, chopped</p><br>
-<p>2 carrots, shredded</p><br>
+                                <p>1 tablespoon olive oil</p><br>
+-->
+                                <p>3 pounds ground turkey</p><br>
+                                <p>3 cups baby spinach, chopped</p><br>
+                                <p>2 carrots, shredded</p><br>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/food8.png" class="d-block w-100" alt="...">
+                            <!--                            <img src="img/food3.jpg"width="500" height="400">-->-->
+                            <div class="carousel-caption d-none d-md-block">
+                                <!--                                <h5>INGREDIENTS</h5>-->
+                                <p>1 1/2 cups brown rice</p><br>
+                                <p>1 tablespoon olive oil</p><br>
+                                <p>3 pounds ground turkey</p><br>
+                                <p>3 cups baby spinach, chopped</p><br>
+                                <p>2 carrots, shredded</p><br>
                             </div>
                         </div>
                     </div>
