@@ -122,6 +122,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="login.php">Sign-in</a>
                         </li>
+                         <li class="nav-item">
+                            <a class="nav-link" href="doctorlogin.php">Doctor</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="UserRegistration.php">Sign-up</a>
                         </li>
