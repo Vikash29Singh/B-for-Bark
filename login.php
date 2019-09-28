@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/fixed.css">
     <style>
         body {
-            
+
             margin: 0;
             padding: 0;
             font-family: sans-serif;
@@ -27,7 +27,7 @@
         }
 
         .login-box {
-            
+
             width: 500px;
             position: absolute;
             background-color: white;
@@ -40,7 +40,7 @@
         }
 
         .login-box h1 {
-            
+
             float: left;
             font-size: 40px;
             border-bottom: 6px solid #1ebba3;
@@ -150,13 +150,13 @@
                 <button class="btn btn-secondary btn-md" href="search.php" target="_blank" name="Login">Sign-in</button>
 
                 <div class="text-center p-t-12">
-                    
-                        <span class="txt1">
-                            Forgot
-                        </span>
-                        <a class="txt2" href="forgotPass.php">
-                            Password
-                        </a>
+
+                    <span class="txt1">
+                        Forgot
+                    </span>
+                    <a class="txt2" href="forgotPass.php">
+                        Password
+                    </a>
                     <!--
 					<a class="txt2" href="reset_password.php">
 						Reset password
