@@ -119,15 +119,19 @@
                             <a class="nav-link" href="#contacts">Contacts</a>
                         </li>
 -->
+<!--
                         <li class="nav-item">
                             <a class="nav-link" href="login.php">Sign-in</a>
                         </li>
+-->
                         <li class="nav-item">
                             <a class="nav-link" href="doctorlogin.php">Doctor</a>
                         </li>
+<!--
                         <li class="nav-item">
                             <a class="nav-link" href="UserRegistration.php">Sign-up</a>
                         </li>
+-->
                     </ul>
                 </div>
             </nav>
@@ -138,7 +142,7 @@
                 <h1>Doctor's Sign-in</h1>
                 <div class="textbox">
                     <!--        <i class="fas fa-user fa-3x " aria-hidden="true"></i>-->
-                    <input type="text" placeholder="Username" name="Name" value="">
+                    <input type="text" placeholder="Username" name="Doc_name" value="" required>
                 </div>
                 <div class="textbox">
                     <!--        <i class="fas fa-lock fa-3x" aria-hidden="true"></i>-->
