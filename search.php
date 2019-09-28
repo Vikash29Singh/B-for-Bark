@@ -692,6 +692,12 @@ else{
     <!--  course section-->
 
     <div id="clients" class="offset">
+         <div class="col-12 narrow text-center">
+            <h1>Trend Analysis</h1>
+            <p class="lead">The disease which are specified below are the diseases which are curretly trending in this season . Make sure your Pet is not suffering from this disease.</p>
+             <br>
+             <p class="lead">PRECAUTION IS ALWAYS BETTER THAN CURE</p>
+        </div>
         <div class="col-12 narrow text-center">
             <h1>Food Suggestion of the Month.</h1>
             <p class="lead">The dogs should be friendly,outgoing,healthy,well-groomed and love to be fussed. All breeds, crossbreeds, shapes and sizes are welcome.</p>
@@ -708,21 +714,21 @@ else{
                             <img src="img/10.jpg" class="d-block w-100" alt="...">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>First slide label</h5>
-                                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                                <p>content.</p>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <img src="img/11.jpg" class="d-block w-100" alt="...">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Second slide label</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <p>content.</p>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <img src="img/12.jpg" class="d-block w-100" alt="...">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Third slide label</h5>
-                                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                                <p>content.</p>
                             </div>
                         </div>
                     </div>
@@ -741,10 +747,7 @@ else{
 
 
         </div>
-        <div class="col-12 narrow text-center">
-            <h1>Monthly Tips.</h1>
-            <p class="lead">The dogs should be friendly,outgoing,healthy,well-groomed and love to be fussed. All breeds, crossbreeds, shapes and sizes are welcome.</p>
-        </div>
+       
     </div>
 
     <!--    end course section-->
