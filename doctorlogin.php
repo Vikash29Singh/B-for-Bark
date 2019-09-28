@@ -134,7 +134,7 @@
         </div>
 
         <div class="col-12 narrow text-center login-box">
-            <form action="login1.php" method="post">
+            <form action="login2.php" method="post">
                 <h1>Doctor's Sign-in</h1>
                 <div class="textbox">
                     <!--        <i class="fas fa-user fa-3x " aria-hidden="true"></i>-->
@@ -150,7 +150,7 @@
                 <!--                <span class="psw">New <a href="UserRegistration.php">User</a></span>-->
                 <br>
                 <br>
-                <button class="btn btn-secondary btn-md" href="search.php" target="_blank" name="Login">Sign-in</button>
+                <button class="btn btn-secondary btn-md" href="doctor.php" target="_blank" name="Login">Sign-in</button>
 
                 <div class="text-center p-t-12">
 
