@@ -1,3 +1,21 @@
+<?php
+session_start();
+include("conn_file.php");
+
+
+#------------------------------------------------------------------------------------------------------------------------------
+//$u_email=$_SESSION['email'];// session Email
+//$u_email=$_SESSION['email'];// session Email
+
+
+if(!isset($_SESSION['USER_NAME'])) 
+	 header("Location: doctorlogin.php"); 
+else{
+	$user=$_SESSION['USER_NAME'];
+}
+#-----------------------------------------------------------------------------------------------------------------------
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -67,7 +85,13 @@
         <div id="home">
             <!--        navigation-->
             <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top ">
-                <a class="navbar-brand" href="index.php"><img src="img/abc_new.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WELCOME TO DOCTOR INFO</a>
+                <a class="navbar-brand" href="index.php"><img src="img/abc_new.png"></a>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<!--                WELCOME TO DOCTOR INFO</a>-->
+                
+                <a class="navbar-brand" href="">Hey Doctor <span style="color:#1ebba3;"> <?php echo $_SESSION["USER_NAME"]; echo"!";?> Welcome Back</span> Ready to care for <span style="color:#1ebba3;">Pet</span></a>
+
+                
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -91,11 +115,13 @@
                         </li>
 -->
                         <li class="nav-item">
-                            <a class="nav-link" href="login.php">Sign-in</a>
+                            <a class="nav-link" href="logout.php">Logout</a>
                         </li>
+<!--
                         <li class="nav-item">
                             <a class="nav-link" href="UserRegistration.php">Sign-up</a>
                         </li>
+-->
                     </ul>
                 </div>
             </nav>
