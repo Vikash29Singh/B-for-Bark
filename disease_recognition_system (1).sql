@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Sep 21, 2019 at 06:58 AM
+-- Generation Time: Sep 28, 2019 at 06:53 PM
 -- Server version: 5.7.19
 -- PHP Version: 5.6.31
 
@@ -79,15 +79,21 @@ CREATE TABLE IF NOT EXISTS `doctor_consultant` (
 
 DROP TABLE IF EXISTS `doctor_details`;
 CREATE TABLE IF NOT EXISTS `doctor_details` (
-  `Doc_Id` int(11) NOT NULL,
+  `Doc_Id` int(11) NOT NULL AUTO_INCREMENT,
   `Password` varchar(30) NOT NULL,
   `Doc_name` varchar(30) NOT NULL,
   `Speciality` varchar(30) NOT NULL,
   `Location` varchar(30) NOT NULL,
   `Phone` int(10) NOT NULL,
-  `Availability` varchar(30) NOT NULL,
   PRIMARY KEY (`Doc_Id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `doctor_details`
+--
+
+INSERT INTO `doctor_details` (`Doc_Id`, `Password`, `Doc_name`, `Speciality`, `Location`, `Phone`) VALUES
+(1, 'anil@123', 'Anil Kumar', 'MBBS', 'Bangalore', 87660437);
 
 -- --------------------------------------------------------
 
@@ -116,7 +122,7 @@ CREATE TABLE IF NOT EXISTS `d_search` (
   `Date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `Search_Id` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`Search_Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `d_search`
@@ -157,7 +163,10 @@ INSERT INTO `d_search` (`U_Id`, `Disease_Id`, `Date`, `Search_Id`) VALUES
 (17, 2, '2019-08-31 05:55:19', 32),
 (17, 3, '2019-08-31 05:55:33', 33),
 (9, 2, '2019-09-20 06:18:58', 34),
-(9, 3, '2019-09-20 06:25:13', 35);
+(9, 3, '2019-09-20 06:25:13', 35),
+(9, 2, '2019-09-28 07:18:15', 36),
+(9, 2, '2019-09-28 07:18:54', 37),
+(9, 2, '2019-09-28 10:06:32', 38);
 
 -- --------------------------------------------------------
 
@@ -213,7 +222,15 @@ INSERT INTO `pet_allergies` (`P_Id`, `Allergies`) VALUES
 (28, 'xzx'),
 (29, 'ashkbh'),
 (29, 'assa'),
-(29, 'sa');
+(29, 'sa'),
+(30, 'ahbhj'),
+(30, 'dsss'),
+(30, 'ghg'),
+(30, 'asdsda'),
+(30, 'ahbhj'),
+(30, 'dsss'),
+(30, 'ghg'),
+(30, 'asdsda');
 
 -- --------------------------------------------------------
 
@@ -242,7 +259,7 @@ CREATE TABLE IF NOT EXISTS `pet_details` (
   `Age` int(11) NOT NULL,
   `Weight` int(11) NOT NULL,
   PRIMARY KEY (`P_Id`)
-) ENGINE=MyISAM AUTO_INCREMENT=30 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=32 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `pet_details`
@@ -264,7 +281,9 @@ INSERT INTO `pet_details` (`P_Id`, `Name`, `Breed`, `Blood_group`, `Age`, `Weigh
 (26, 'aman', 'mc', 'a+', 23, 5),
 (27, 'jojo', 'pug', 'a+', 5, 20),
 (28, '1121212', 'sdhh', 'a+', 23, 5),
-(29, 'mc', 'bc', 'a+', 8, 44);
+(29, 'mc', 'bc', 'a+', 8, 44),
+(30, 'hello', 'bye', 'o+', 12, 23),
+(31, 'hello', 'bye', 'o+', 12, 23);
 
 -- --------------------------------------------------------
 
@@ -298,7 +317,13 @@ INSERT INTO `pet_medic` (`P_Id`, `Medication`) VALUES
 (29, 'as'),
 (29, 'as'),
 (29, 'sd'),
-(29, 'sa');
+(29, 'sa'),
+(30, 'asd'),
+(30, 'fs'),
+(30, 'hg'),
+(30, 'asd'),
+(30, 'fs'),
+(30, 'hg');
 
 -- --------------------------------------------------------
 
@@ -413,7 +438,9 @@ CREATE TABLE IF NOT EXISTS `user_pet` (
 --
 
 INSERT INTO `user_pet` (`P_Id`, `Name`) VALUES
-(29, 'jai');
+(29, 'jai'),
+(30, 'jai'),
+(30, 'jai');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
