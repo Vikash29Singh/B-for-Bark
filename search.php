@@ -518,7 +518,7 @@ else{
         <br>
         <div class="container1">
             <form action="diseasesym.php" method="post">
-                <input type="text" placeholder="Symptoms..." required>
+                <input type="text" name="symp" placeholder="Symptoms..." required>
                 <div class="search"></div>
             </form>
         </div>
