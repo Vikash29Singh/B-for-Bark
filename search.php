@@ -692,15 +692,15 @@ else{
     <!--  course section-->
 
     <div id="clients" class="offset">
-         <div class="col-12 narrow text-center">
+        <div class="col-12 narrow text-center">
             <h1>Trend Analysis</h1>
             <p class="lead">The disease which are specified below are the diseases which are currently trending in this season . Make sure your Pet is not suffering from this disease.</p>
-             <br>
-             <p class="lead">PRECAUTION IS ALWAYS BETTER THAN CURE</p>
+            <br>
+            <p class="lead">PRECAUTION IS ALWAYS BETTER THAN CURE</p>
         </div>
         <div class="col-12 narrow text-center">
             <h1>Food Suggestion of the Month.</h1>
-            <p class="lead">The dogs should be friendly,outgoing,healthy,well-groomed and love to be fussed. All breeds, crossbreeds, shapes and sizes are welcome.</p>
+            <p class="lead">Keep your dog healthy and fit with this easy peasy homemade recipe – it’s cheaper than store-bought ...</p>
             <br>
             <div class="bd-example">
                 <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -711,24 +711,40 @@ else{
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="img/10.jpg" class="d-block w-100" alt="...">
+<!--                            <img src="img/food2.jpg"width="250" height="300">-->
+                            <img src="img/food2.jpg" class="d-block w-90"alt="...">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5>First slide label</h5>
-                                <p>content.</p>
+                                <h5>INGREDIENTS</h5>
+<!--
+                                <p>1 1/2 cups brown rice</p><br>
+                                <p>1 tablespoon olive oil</p><br>
+-->
+                                <p>3 pounds ground turkey</p><br>
+                                <p>3 cups baby spinach, chopped</p><br>
+                                <p>2 carrots, shredded</p><br>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="img/11.jpg" class="d-block w-100" alt="...">
+                            <img src="img/food1.jpg" class="d-block w-50" alt="...">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5>Second slide label</h5>
-                                <p>content.</p>
+                                <h5>INGREDIENTS</h5>
+                                <p>3 lbs lean ground chicken</p><br>
+                                <p>1 cup butternut squash (I use frozen, precut)</p><br>
+                                <p>15 oz can kidney beans (drained)</p><br>
+                                <p>1 cup peas</p><br>
+                                <p>1 cup green beans</p><br>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="img/12.jpg" class="d-block w-100" alt="...">
+<!--                            <img src="img/food3.jpg" class="d-block w-50" alt="...">-->
+                            <img src="img/food3.jpg"width="500" height="400">-->
                             <div class="carousel-caption d-none d-md-block">
-                                <h5>Third slide label</h5>
-                                <p>content.</p>
+<!--                                <h5>INGREDIENTS</h5>-->
+                                <p>1 1/2 cups brown rice</p><br>
+<p>1 tablespoon olive oil</p><br>
+<p>3 pounds ground turkey</p><br>
+<p>3 cups baby spinach, chopped</p><br>
+<p>2 carrots, shredded</p><br>
                             </div>
                         </div>
                     </div>
@@ -747,7 +763,7 @@ else{
 
 
         </div>
-       
+
     </div>
 
     <!--    end course section-->
