@@ -130,6 +130,9 @@
 
     <?php
     
+    if(isset($_POST['Dname']))
+    {
+    
             $dname=$_POST['Dname'];
                 $qry1="select * from disease_details where Disease_Name='$dname'";
                 $q=mysqli_query($conn,$qry1);
@@ -158,7 +161,61 @@
                 $q2=mysqli_query($conn,$qry2); 
     $qry3="select * from remedies where Disease_Id='$did'";
                 $q3=mysqli_query($conn,$qry3);
-       
+     
+    }
+    
+    
+    
+    
+    
+    if(isset($_POST['symp']))
+       {
+          $sy=explode(",",$_POST['symp']);
+           
+               
+               if(($n=sizeof($sy)==1))
+                  {
+               $q1="select * from disease_details,symptoms where disease_details.Disease_Id = symptoms.Disease_Id and symptoms.Symptoms='$sy[0]'";
+                $a=mysqli_query($conn,$q1);
+                      //$dname=mysqli_fetch_array($a1);
+                  }
+                  
+                  else if(($n=sizeof($sy)==2))
+                          {
+                $q2="select * from disease_details,symptoms where disease_details.Disease_Id = symptoms.Disease_Id and symptoms.Symptoms in ('$sy[0]', '$sy[1]')";
+                $a=mysqli_query($conn,$q2);
+                     // $dname=mysqli_fetch_array($a2);
+                          }
+                          
+                    else if(($n=sizeof($sy)==3))
+                            {
+                $q3="select * from disease_details,symptoms where disease_details.Disease_Id = symptoms.Disease_Id and symptoms.Symptoms in ('$sy[0]', '$sy[1]','$sy[2]')";
+                $a=mysqli_query($conn,$q3);
+                      //$dname=mysqli_fetch_array($a3);
+                            }
+                            
+                    else
+                            {
+                $q4="select * from disease_details,symptoms where disease_details.Disease_Id = symptoms.Disease_Id and symptoms.Symptoms in ('$sy[0]', '$sy[1]','$sy[2]','$sy[3]')";
+                $a=mysqli_query($conn,$q4);
+                      //$dname=mysqli_fetch_array($a3);
+                            }
+               
+           while($row=mysqli_fetch_assoc($a))
+                            {
+                                echo $row['Disease_name'];
+                            }
+           
+         
+       }
+    
+    
+    
+    
+    
+    
+    
+    
     ?>
 
     <div class="container">
