@@ -4,13 +4,13 @@ include ('conn_file.php');
  if(isset($_POST['Login']))
     {
 //username and password
- $username=$_POST['Name']; 
+ $username=$_POST['Doc_name']; 
  $password=$_POST['Password']; 
 			  
 //admin Login
 // $_SESSION['username']=$username;// session Email
 
-$sqlp1="SELECT * FROM user_details WHERE Name='$username' and Password='$password'";
+$sqlp1="SELECT * FROM doctor_details WHERE Doc_name='$username' and Password='$password'";
 
         
            $resultp1=mysqli_query($conn,$sqlp1);
@@ -23,7 +23,7 @@ $sqlp1="SELECT * FROM user_details WHERE Name='$username' and Password='$passwor
                   if($id)
                   {
                     session_start();
-                    $_SESSION["USER_NAME"]=$id['Name'];
+                    $_SESSION["USER_NAME"]=$id['Doc_name'];
                  header("Location: doctor.php");// to user homepage
                   }
                   else
