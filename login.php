@@ -135,7 +135,7 @@
                 <h1>Sign-in</h1>
                 <div class="textbox">
                     <!--        <i class="fas fa-user fa-3x " aria-hidden="true"></i>-->
-                    <input type="text" placeholder="Username" name="Name" value="">
+                    <input type="text" placeholder="Username" name="Name" value="" required>
                 </div>
                 <div class="textbox">
                     <!--        <i class="fas fa-lock fa-3x" aria-hidden="true"></i>-->
