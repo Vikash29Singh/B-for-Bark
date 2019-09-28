@@ -712,7 +712,7 @@ else{
                     <div class="carousel-inner">
                         <div class="carousel-item active">
 <!--                            <img src="img/food2.jpg"width="250" height="300">-->
-                            <img src="img/food2.jpg" class="d-block w-90"alt="...">
+                            <img src="img/food2.jpg" class="d-block w-100"alt="...">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>INGREDIENTS</h5>
 <!--
@@ -725,7 +725,7 @@ else{
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="img/food1.jpg" class="d-block w-50" alt="...">
+                            <img src="img/food1.jpg" class="d-block w-100" alt="...">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>INGREDIENTS</h5>
                                 <p>3 lbs lean ground chicken</p><br>
@@ -736,8 +736,8 @@ else{
                             </div>
                         </div>
                         <div class="carousel-item">
-<!--                            <img src="img/food3.jpg" class="d-block w-50" alt="...">-->
-                            <img src="img/food3.jpg"width="500" height="400">-->
+                            <img src="img/food3.jpg" class="d-block w-100" alt="...">
+<!--                            <img src="img/food3.jpg"width="500" height="400">-->-->
                             <div class="carousel-caption d-none d-md-block">
 <!--                                <h5>INGREDIENTS</h5>-->
                                 <p>1 1/2 cups brown rice</p><br>
