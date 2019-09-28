@@ -697,9 +697,8 @@ else{
             <p class="lead">The disease which are specified below are the diseases which are currently trending in this season . Make sure your Pet is not suffering from this disease.</p>
             <br>
             <p class="lead">PRECAUTION IS ALWAYS BETTER THAN CURE</p>
-        </div>
-        
-        <?php
+            
+            <?php
         
             //$qry2="SELECT Disease_ID FROM d_search GROUP BY Disease_Id ORDER BY COUNT(Disease_Id) DESC LIMIT 2";
             
@@ -710,6 +709,7 @@ else{
                     while($row = mysqli_fetch_assoc($result))
                     {
                     echo "<tr>";
+                    echo "<br>";
                     echo "<br>";
                     echo "<td>" . $row['Disease_name'] . "</td>";
                     echo "<br>";
@@ -736,6 +736,10 @@ else{
                 }
             }*/
       ?>
+            
+        </div>
+        
+        
         
         
         <div class="col-12 narrow text-center">
