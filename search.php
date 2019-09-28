@@ -668,7 +668,7 @@ else{
         <h4>Search&nbsp;&nbsp;&nbsp;for&nbsp;&nbsp;&nbsp;Symptoms </h4>
         <br>
         <div class="container1">
-            <form action="diseasesym.php" method="post">
+            <form action="multisym.php" method="post">
                 <input type="text" name="symp" placeholder="Symptoms..." required>
                 <div class="search"></div>
             </form>
