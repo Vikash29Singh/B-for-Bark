@@ -34,10 +34,10 @@ else{
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js">
-    
-    
-    
-    
+
+
+
+
     </script>
 
     <style>
@@ -82,6 +82,14 @@ else{
         }
 
     </style>
+    <script>
+        function abc(event) {
+            event.preventDefault();
+            var href = event.currentTarget.getAttribute('href')
+            window.location = 'https://www.petmd.com/dog/conditions/skin/c_dg_acne' + href;
+        }
+
+    </script>
 </head>
 
 <body data-spy="scroll" data-target="#navbarResponsive">
