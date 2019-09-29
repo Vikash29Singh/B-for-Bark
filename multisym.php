@@ -193,7 +193,22 @@ else{
            while($row=mysqli_fetch_assoc($a))
                             {
                                 echo $row['Disease_name'];
-                            }
+               echo "<br>";
+                              echo $row['Disease_type'];
+               echo "<br>";
+               
+               echo $row['Disease_description'];
+               echo "<br>";
+               
+               ?>
+
+
+
+                <a class="btn btn-secondary btn-md" href="" target="_blank">Know More
+                </a><br>
+
+                <?php                    }
+                
            
          
        }
@@ -216,7 +231,7 @@ else{
 
 
 
-                <a class="btn btn-secondary btn-md" href="" target="_blank">Know More</a>
+
 
 
 
