@@ -24,7 +24,7 @@
             background-image: url(img/34.jpg);
             max-width: 100%;
             max-height: 100%;
-        }
+          }
 
         .login-box {
 
