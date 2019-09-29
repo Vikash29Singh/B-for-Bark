@@ -2,6 +2,8 @@
 <html>
 <?php include 'conn_file.php';
     session_start();
+     //date_default_timezone_set('India');
+    $date = date('Y-m-d');
     ?>
 
 <head>
@@ -212,8 +214,8 @@
     
     
     
-    
-    
+ 
+   
     
     
     
@@ -228,14 +230,14 @@
 
             <div class="col-md-4">
                 <div class="single-blog">
-                    <p class="blog-meta">Diseases<span>August 31,2019</span></p>
+                    <p class="blog-meta">Diseases<span><?php echo "$date"?></span></p>
                     <img src="img/5.jpg">
                     <h2><a href="#">Here is the Disease Description specified by you</a></h2>
                     <p class="blog-text"><?php echo $dis['Disease_name'] ?>
                         <br>
                         <?php echo $dis['Disease_description'] ?></p>
 
-                    <p><a href="" class="read-more-btn">Read More</a>
+                    <p><a href="https://www.petmd.com/dog/conditions/skin/c_dg_acne" class="read-more-btn">Read More</a>
                         <span><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> We Hope This Helps You</span>
                     </p>
 
@@ -243,7 +245,7 @@
             </div>
             <div class="col-md-4">
                 <div class="single-blog">
-                    <p class="blog-meta">Symptoms<span>August 31,2019</span></p>
+                    <p class="blog-meta">Symptoms<span><?php echo "$date"?></span></p>
                     <img src="img/23.jpg">
                     <h2><a href="#">Here is the Symptoms for the Specified Disease</a></h2>
                     <p class="blog-text">
@@ -257,7 +259,7 @@
                                 }
                     ?>
                     </p>
-                    <p><a href="" class="read-more-btn">Read More</a>
+                    <p><a href="https://www.petmd.com/dog/conditions/skin/c_dg_acne" class="read-more-btn">Read More</a>
                         <span><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>We Hope This Helps You</span>
                     </p>
                 </div>
@@ -265,7 +267,7 @@
 
             <div class="col-md-4">
                 <div class="single-blog">
-                    <p class="blog-meta">Remedies<span>August 31,2019</span></p>
+                    <p class="blog-meta">Remedies<span><?php echo "$date"?></span></p>
                     <img src="img/17.jpg">
                     <h2><a href="#">This is our help for you</a></h2>
                     <p class="blog-text">
@@ -280,7 +282,7 @@
                             }
                         ?>
                     </p>
-                    <p><a href="" class="read-more-btn">Read More</a>
+                    <p><a href="https://www.petmd.com/dog/conditions/skin/c_dg_acne" class="read-more-btn">Read More</a>
                         <span><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>We Hope This Helps You</span>
                     </p>
                 </div>
