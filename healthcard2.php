@@ -243,7 +243,7 @@ WHERE users.email='$user_email' AND users.user_id=data.user_id";
                         </thead>
                         <?php
                         
-                        if(isset($_POST['Search']))
+                        if(isset($_POST['a1']))
                         {
                         
                             $name =$_POST['Pet_name'];
