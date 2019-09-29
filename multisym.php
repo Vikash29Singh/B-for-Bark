@@ -26,13 +26,19 @@ else{
     <link rel="stylesheet" href="bootstrap-4.1.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/fixed.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <!-- Latest compiled and minified CSS -->
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">-->
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js">
+    
+    
+    
+    
+    </script>
 
     <style>
         .big text {
@@ -192,7 +198,7 @@ else{
                
            while($row=mysqli_fetch_assoc($a))
                             {
-                                echo $row['Disease_name'];
+                                echo $id1=$row['Disease_name'];
                echo "<br>";
                               echo $row['Disease_type'];
                echo "<br>";
@@ -204,8 +210,10 @@ else{
 
 
 
-                <a class="btn btn-secondary btn-md" href="" target="_blank">Know More
+                <a class="btn btn-secondary btn-md" onclick='abc(event);' id="first" href="http://www.google.com" target="_blank">Know More
                 </a><br>
+
+
 
                 <?php                    }
                 
