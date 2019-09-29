@@ -182,21 +182,6 @@
   ?>
             </div>
 
-            <!-- <div class="field-group">
-		<div><label for="username">Username</label></div>
-		<div><input type="text" name="user-login-name" id="user-login-name" class="input-field"> Or</div>
-	</div>
-	 -->
-<!--
-            <div class="field-group">
-                <div><label for="email">
-                        <h3>Enter Your Email</h3>
-                    </label></div>
-                <div><input type="text" name="user-email" id="user-email" class="input-field" required>
-                    <input type="submit" name="forgot-password" id="forgot-password" value="Submit" class="form-submit-button">
--->
-                    
-                    
                     <div class="col-12 narrow text-center login-box">
             <form action="login1.php" method="post">
                 <h1>Forgot Password?</h1>
@@ -204,12 +189,12 @@
                     <input type="email" name="user-email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 3}$" title="Please input a valid format for email." placeholder="Email" id="user-email" class="input-field" required >
                 </div>
 
-                <button class="btn btn-secondary btn-md" href="search.php" target="_blank" name="forgot-password" id="forgot-password" value="Submit" class="form-submit-button">Sign-in</button>
+                <button class="btn btn-secondary btn-md" href="search.php" target="_blank" name="forgot-password" id="forgot-password" value="Submit" class="form-submit-button">SUBMIT</button>
 
 
             </form>
                 </div>
-            </div>
+            
         </form>
     </div>
 </body>
