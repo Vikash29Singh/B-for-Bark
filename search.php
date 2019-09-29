@@ -621,7 +621,7 @@ else{
                     <li class="nav-item">
                         <a class="nav-link" href="petregister.php">Pet-Register</a>
                     </li>
-<!--
+                    <!--
                     <li class="nav-item">
                         <a class="nav-link" href="">History</a>
                     </li>
@@ -699,9 +699,9 @@ else{
             <p class="lead">The disease which are specified below are the diseases which are currently trending in this season . Make sure your Pet is not suffering from this disease.</p>
             <p class="lead"><span style="color:#1ebba3;">"PRECAUTION IS ALWAYS BETTER THAN CURE"</span></p>
             <p>______________________________________</p>
-            
-    
-               <?php
+
+
+            <?php
         
             //$qry2="SELECT Disease_ID FROM d_search GROUP BY Disease_Id ORDER BY COUNT(Disease_Id) DESC LIMIT 2";
             
@@ -715,6 +715,7 @@ else{
                     echo "<br>";
                    
                     echo "<td>" . $row['Disease_name'] . "</td>";
+                    
                     echo "<br>";
                     echo "<td>" . $row['Disease_type'] . "</td>";
                     echo "<br>";
@@ -741,14 +742,14 @@ else{
                ?>
             <br>
             <br>
-    
+
             <p>___________________________________________________________________________________________________________</p>
-            
+
         </div>
-        
-        
-        
-        
+
+
+
+
         <div class="col-12 narrow text-center">
             <h1><span style="color:#1ebba3;">Food Suggestion of the Month.</span></h1>
             <p class="lead"><span style="color:#1ebba3;">Keep your dog healthy and fit with this easy peasy homemade recipe – it’s cheaper than store-bought ...</span></p>
@@ -764,17 +765,18 @@ else{
                         <div class="carousel-item active">
                             <!--                            <img src="img/food2.jpg"width="250" height="300">-->
                             <img src="img/food1.1.png" class="d-block w-100" alt="...">
-                           <div class="carousel-caption d-none d-md-block">
-                               <span style="color:blue">
-                                <h5 class="animated heartBeat delay-2s">INGREDIENTS</h5>
-                                <p>3 lbs lean ground chicken</p><br>
-                                <p>1 cup butternut squash (I use frozen, precut)</p><br>
-                                <p>15 oz can kidney beans (drained)</p><br>
-                                <p>1 cup peas</p><br>
-                                <p>1 cup green beans</p><br></span>
+                            <div class="carousel-caption d-none d-md-block">
+                                <span style="color:blue">
+                                    <h5 class="animated heartBeat delay-2s">INGREDIENTS</h5>
+                                    <p>3 lbs lean ground chicken</p><br>
+                                    <p>1 cup butternut squash (I use frozen, precut)</p><br>
+                                    <p>15 oz can kidney beans (drained)</p><br>
+                                    <p>1 cup peas</p><br>
+                                    <p>1 cup green beans</p><br>
+                                </span>
                             </div>
                         </div>
-<!--
+                        <!--
                         <div class="carousel-item">
                             <img src="img/food1.6.png" class="d-block w-`100" alt="...">
                            
@@ -795,11 +797,13 @@ else{
                             <!--                            <img src="img/food3.jpg"width="500" height="400">-->-->
                             <div class="carousel-caption d-none d-md-block">
                                 <!--                                <h5>INGREDIENTS</h5>-->
-                                 <span style="color:blue"><p>1 1/2 cups brown rice</p><br>
-                                <p>1 tablespoon olive oil</p><br>
-                                <p>3 pounds ground turkey</p><br>
-                                <p>3 cups baby spinach, chopped</p><br>
-                                <p>2 carrots, shredded</p><br></span>
+                                <span style="color:blue">
+                                    <p>1 1/2 cups brown rice</p><br>
+                                    <p>1 tablespoon olive oil</p><br>
+                                    <p>3 pounds ground turkey</p><br>
+                                    <p>3 cups baby spinach, chopped</p><br>
+                                    <p>2 carrots, shredded</p><br>
+                                </span>
                             </div>
                         </div>
                     </div>
