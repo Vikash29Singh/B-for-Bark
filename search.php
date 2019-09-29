@@ -698,7 +698,8 @@ else{
             <br>
             <p class="lead">PRECAUTION IS ALWAYS BETTER THAN CURE</p>
             
-            <?php
+    
+               <?php
         
             //$qry2="SELECT Disease_ID FROM d_search GROUP BY Disease_Id ORDER BY COUNT(Disease_Id) DESC LIMIT 2";
             
@@ -711,20 +712,21 @@ else{
                     echo "<tr>";
                     echo "<br>";
                     echo "<br>";
-                    echo "<td>" . $row['Disease_name'] . "</td>";
+                    echo " <font color='#1ebba3' size='4pt'>";
+                   echo "<td>" . $row['Disease_name'] . "</td>";
                     echo "<br>";
                     echo "<td>" . $row['Disease_type'] . "</td>";
                     echo "<br>";
                     echo "<td>" . $row['Disease_description'] . "</td>";
                     echo "<br";
                     //echo "<td>" . $row['Breed'] . "</td>";
-                        
+                     echo "</font>";   
                     echo "</tr>";
                     }
-                    
+                         
                     
                     echo "</table>";
-            
+               
             //$ret=mysqli_query($conn,$qry2);
             //$my=mysqli_fetch_assoc($ret);
             
@@ -735,7 +737,7 @@ else{
                     echo $row." ";
                 }
             }*/
-      ?>
+               ?>
             
         </div>
         
@@ -758,26 +760,27 @@ else{
                             <!--                            <img src="img/food2.jpg"width="250" height="300">-->
                             <img src="img/food1.jpg" class="d-block w-100" alt="...">
                            <div class="carousel-caption d-none d-md-block">
-                                <h5>INGREDIENTS</h5>
+                               <span style="color:blue">
+                                <h5 class="animated heartBeat delay-2s">INGREDIENTS</h5>
                                 <p>3 lbs lean ground chicken</p><br>
                                 <p>1 cup butternut squash (I use frozen, precut)</p><br>
                                 <p>15 oz can kidney beans (drained)</p><br>
                                 <p>1 cup peas</p><br>
-                                <p>1 cup green beans</p><br>
+                                <p>1 cup green beans</p><br></span>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <img src="img/food9.png" class="d-block w-100" alt="...">
                            
                               <div class="carousel-caption d-none d-md-block">
-                                <h5>INGREDIENTS</h5>
+                               <span style="color:blue"> <h5>INGREDIENTS</h5>
                                 <!--
                                 <p>1 1/2 cups brown rice</p><br>
                                 <p>1 tablespoon olive oil</p><br>
 -->
                                 <p>3 pounds ground turkey</p><br>
                                 <p>3 cups baby spinach, chopped</p><br>
-                                <p>2 carrots, shredded</p><br>
+                                <p>2 carrots, shredded</p><br></span>
                             </div>
                         </div>
                         <div class="carousel-item">
@@ -785,11 +788,11 @@ else{
                             <!--                            <img src="img/food3.jpg"width="500" height="400">-->-->
                             <div class="carousel-caption d-none d-md-block">
                                 <!--                                <h5>INGREDIENTS</h5>-->
-                                <p>1 1/2 cups brown rice</p><br>
+                                 <span style="color:blue"><p>1 1/2 cups brown rice</p><br>
                                 <p>1 tablespoon olive oil</p><br>
                                 <p>3 pounds ground turkey</p><br>
                                 <p>3 cups baby spinach, chopped</p><br>
-                                <p>2 carrots, shredded</p><br>
+                                <p>2 carrots, shredded</p><br></span>
                             </div>
                         </div>
                     </div>
