@@ -225,12 +225,20 @@ WHERE users.email='$user_email' AND users.user_id=data.user_id";
         <div class="container-table100">            
             <div class="wrap-table100">
                 
-                 <form name="healthcard" action="table1.php" method="post">
-               
-                <input type="text" placeholder="Enter pet name" name="Pet_name" value="" required>
-                
-                <input type="submit" name="Search">
-            </form><br>
+                 <div class="col-12 narrow text-center login-box">
+                    <form name="healthcard" action="table1.php" method="post">
+                        <h1>Pet Details</h1>
+                        <br>
+                        <div class="textbox">
+                            <!--        <i class="fas fa-user fa-3x " aria-hidden="true"></i>-->
+                            <center> <input type="text" placeholder="         Enter pet name" name="Pet_name" value="" required></center>
+                            <br>
+                            <button class="btn btn-secondary btn-md" href="search.php" target="_blank" name="Search">Submit</button>
+
+                        </div>
+                    </form>
+                </div>
+                <br>
                 
                 <div class="table100 ver6 m-b-110">
                     
