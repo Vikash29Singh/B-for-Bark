@@ -217,8 +217,9 @@ WHERE users.email='$user_email' AND users.user_id=data.user_id";
         
         <div class="container-table100">
             
-        <form name="healthcard" action="table.php">
+        
             <div class="textbox">
+                <form name="healthcard" action="table.php" method="post">
                     <!--        <i class="fas fa-user fa-3x " aria-hidden="true"></i>-->
                     <input type="text" placeholder="Enter pet name" name="Pet_name" value="" required>
                 </div>
@@ -231,54 +232,109 @@ WHERE users.email='$user_email' AND users.user_id=data.user_id";
                             <tr class="row100 head">
                                 <th class="column100 column1" data-column="column1">
                                     <center>
-                                        <h5>Pet Healthcard</h5>
+                                        <h3>Pet Healthcard</h3>
                                     </center>
                                 </th>
 
                             </tr>
 
                         </thead>
+                        
+                        <?php
+                        
+                        if(isset($_POST['Search']))
+                        {
+                        
+                            $name =$_POST['Pet_name'];
+                            
+                        $a = "Select * from pet_details where Name = '$name' ";
+                        
+                        $res1 = mysqli_query($conn,$a);
+                        $row1 = mysqli_fetch_assoc($res1);
+                            $pid = $row1['P_Id'];
+                        ?>
+                        
                         <tbody>
                             <tr class="row100">
                                 <td class="column100 column1" data-column="column1">NAME</td>
-                                <td class="column100 column2" data-column="column2"></td>
+                                <td class="column100 column2" data-column="column2"><?php 
+                            
+                            
+                                echo $row1['Name']; ?></td>
 
 
                             </tr>
 
                             <tr class="row100">
                                 <td class="column100 column1" data-column="column1">BREED</td>
-                                <td class="column100 column2" data-column="column2"></td>
+                                <td class="column100 column2" data-column="column2"><?php 
+                            
+                            
+                                echo $row1['Breed']; ?></td>
 
 
                             </tr>
 
                             <tr class="row100">
-                                <td class="column100 column1" data-column="column1">WEIGHT</td>
-                                <td class="column100 column2" data-column="column2"></td>
+                                <td class="column100 column1" data-column="column1">BLOOD GROUP</td>
+                                <td class="column100 column2" data-column="column2"><?php 
+                            
+                            
+                                echo $row1['Blood_group']; ?></td>
 
                             </tr>
 
                             <tr class="row100">
                                 <td class="column100 column1" data-column="column1">AGE</td>
-                                <td class="column100 column2" data-column="column2"></td>
+                                <td class="column100 column2" data-column="column2"><?php 
+                            
+                            
+                                echo $row1['Age']; ?></td>
                             </tr>
 
                             <tr class="row100">
-                                <td class="column100 column1" data-column="column1">BLOOD GROUP</td>
-                                <td class="column100 column2" data-column="column2"></td>
+                                <td class="column100 column1" data-column="column1">WEIGHT</td>
+                                <td class="column100 column2" data-column="column2"><?php 
+                            
+                            
+                                echo $row1['Weight']; ?></td>
                             </tr>
 
                             <tr class="row100">
                                 <td class="column100 column1" data-column="column1">ALLERGIES</td>
-                                <td class="column100 column2" data-column="column2">
+                                <td class="column100 column2" data-column="column2"> <?php 
+                            $c = "SELECT * from pet_allergies where P_Id = '$pid'";
+                            
+                        $res3 = mysqli_query($conn,$c);
+                            
+                            while($row3 = mysqli_fetch_array($res3))
+                                    {
+                                        echo $row3['Allergies'];
+                                        echo ", ";
+                                    }
+                        
+                                    ?>
                                 </td>
 
                             </tr>
 
                             <tr class="row100">
                                 <td class="column100 column1" data-column="column1">MEDICATION</td>
-                                <td class="column100 column2" data-column="column2">
+                                <td class="column100 column2" data-column="column2"> <?php 
+                            
+                            
+                            
+                        $b = "SELECT * from pet_medic where P_Id = '$pid'";
+                            
+                        $res2 = mysqli_query($conn,$b);
+                            
+                            while($row2 = mysqli_fetch_array($res2))
+                                    {
+                                        echo $row2['Medication'];
+                                        echo ", ";
+                                    }
+                        }
+                                    ?>
                                 </td>
 
                             </tr>
