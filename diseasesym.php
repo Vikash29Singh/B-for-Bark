@@ -307,7 +307,7 @@
                     ?> <br> <form action="diseasesym.php" method="post">
             <buton type="submit" name="send">TAKE APPOINTEMENT</buton>
                 <input type="text" name="pname" placeholder="for which pet of yours">
-                            </form>
+                </form>
                 
                 <?php
                 }
