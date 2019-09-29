@@ -2,7 +2,7 @@
 <html lang="en">
 
 <?php 
-    include 'D:/wamp64/www/B-for-Bark/conn_file.php';  
+    include 'conn_file.php';  
     
     session_start();
 ?>
