@@ -230,9 +230,9 @@ WHERE users.email='$user_email' AND users.user_id=data.user_id";
                         <br>
                         <div class="textbox">
                             <!--        <i class="fas fa-user fa-3x " aria-hidden="true"></i>-->
-                            <center> <input type="text" placeholder="         Enter pet name" name="Name" value="" required></center>
+                            <center> <input type="text" placeholder="         Enter pet name" name="Pet_name" value="" required></center>
                             <br>
-                            <button class="btn btn-secondary btn-md" href="search.php" target="_blank" name="Login">Submit</button>
+                            <button class="btn btn-secondary btn-md" href="search.php" target="_blank" name="Search">Submit</button>
 
                         </div>
                     </form>
