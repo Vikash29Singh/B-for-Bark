@@ -695,10 +695,10 @@ else{
 
     <div id="clients" class="offset">
         <div class="col-12 narrow text-center">
-            <h1>Trend Analysis</h1>
+            <h1><span style="color:#1ebba3;">Trend Analysis</span></h1>
             <p class="lead">The disease which are specified below are the diseases which are currently trending in this season . Make sure your Pet is not suffering from this disease.</p>
-            <br>
-            <p class="lead">PRECAUTION IS ALWAYS BETTER THAN CURE</p>
+            <p class="lead"><span style="color:#1ebba3;">"PRECAUTION IS ALWAYS BETTER THAN CURE"</span></p>
+            <p>______________________________________</p>
             
     
                <?php
@@ -713,16 +713,15 @@ else{
                     {
                     echo "<tr>";
                     echo "<br>";
-                    echo "<br>";
-                    echo " <font color='#1ebba3' size='4pt'>";
-                   echo "<td>" . $row['Disease_name'] . "</td>";
+                   
+                    echo "<td>" . $row['Disease_name'] . "</td>";
                     echo "<br>";
                     echo "<td>" . $row['Disease_type'] . "</td>";
                     echo "<br>";
                     echo "<td>" . $row['Disease_description'] . "</td>";
                     echo "<br";
                     //echo "<td>" . $row['Breed'] . "</td>";
-                     echo "</font>";   
+                       
                     echo "</tr>";
                     }
                          
@@ -740,6 +739,10 @@ else{
                 }
             }*/
                ?>
+            <br>
+            <br>
+    
+            <p>___________________________________________________________________________________________________________</p>
             
         </div>
         
@@ -747,8 +750,8 @@ else{
         
         
         <div class="col-12 narrow text-center">
-            <h1>Food Suggestion of the Month.</h1>
-            <p class="lead">Keep your dog healthy and fit with this easy peasy homemade recipe – it’s cheaper than store-bought ...</p>
+            <h1><span style="color:#1ebba3;">Food Suggestion of the Month.</span></h1>
+            <p class="lead"><span style="color:#1ebba3;">Keep your dog healthy and fit with this easy peasy homemade recipe – it’s cheaper than store-bought ...</span></p>
             <br>
             <div class="bd-example">
                 <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -760,7 +763,7 @@ else{
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <!--                            <img src="img/food2.jpg"width="250" height="300">-->
-                            <img src="img/food1.jpg" class="d-block w-100" alt="...">
+                            <img src="img/food1.1.png" class="d-block w-100" alt="...">
                            <div class="carousel-caption d-none d-md-block">
                                <span style="color:blue">
                                 <h5 class="animated heartBeat delay-2s">INGREDIENTS</h5>
@@ -771,22 +774,24 @@ else{
                                 <p>1 cup green beans</p><br></span>
                             </div>
                         </div>
+<!--
                         <div class="carousel-item">
-                            <img src="img/food9.png" class="d-block w-100" alt="...">
+                            <img src="img/food1.6.png" class="d-block w-`100" alt="...">
                            
                               <div class="carousel-caption d-none d-md-block">
                                <span style="color:blue"> <h5>INGREDIENTS</h5>
-                                <!--
+                                
                                 <p>1 1/2 cups brown rice</p><br>
                                 <p>1 tablespoon olive oil</p><br>
--->
+
                                 <p>3 pounds ground turkey</p><br>
                                 <p>3 cups baby spinach, chopped</p><br>
                                 <p>2 carrots, shredded</p><br></span>
                             </div>
                         </div>
+-->
                         <div class="carousel-item">
-                            <img src="img/food8.png" class="d-block w-100" alt="...">
+                            <img src="img/food1.5.png" class="d-block w-100" alt="...">
                             <!--                            <img src="img/food3.jpg"width="500" height="400">-->-->
                             <div class="carousel-caption d-none d-md-block">
                                 <!--                                <h5>INGREDIENTS</h5>-->
