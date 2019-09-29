@@ -175,12 +175,116 @@ else{
                 <th>Pet Name</th>
                 <th>Health Card</th>
             </tr>
+        <form action="table.php" method="post">
+        
+         <?php
+        $docid=$_SESSION['USER_ID'];
+        
+        
+        $qry="select * from doc_appointment where Doc_Id='$docid'";
+        $rn=mysqli_query($conn,$qry);
+        $i=0;
+            $size=mysqli_num_rows($rn);
+        while($row=mysqli_fetch_assoc($rn))
+        {
+            $pid=$row['P_Id'];
+            $pida[$i]=$row['P_Id']; //taken an array to store all the id's so that one can display the healthcard accordingly.
+            //echo $row['P_Id'];
+            $qry2="Select * from pet_details where P_Id='$pid'";
+            $rn2=mysqli_query($conn,$qry2);
+            $ans=mysqli_fetch_assoc($rn2);
+            //echo $ans['Name'];  //all the pets for whom appointment is taken will be displayed here
+            
+       
+              ?>
+        
+        
+        
+        
+        
+        <?php
+            
+            if($size==1)
+            {
+            ?>
+        
             <tr>
-                <td>1</td>
-                <td></td>
-                <td></td>
+                <td><?php echo ($i+1) ?></td>
+                <td><?php echo $ans['Name']; ?></td>
+                <td><input type="text" value="<?php '$pida[$i]' ?>" hidden="hidden"><button type="submit" name="1">HEALTH CARD</button> </td>
+            </tr>
+            <?php
+            }
+            
+            
+            else if($size == 2)
+            {
+            ?>
+            
+            <tr>
+                <td><?php echo ($i+1) ?></td>
+                <td><?php echo $ans['Name']; ?></td>
+                <td><input type="text" value="<?php '$pida[$i]' ?>" hidden="hidden"><button type="submit" name="1">HEALTH CARD</button> </td>
+            </tr>
+            <?php $i=$i+1; ?>
+            <tr>
+                <td><?php echo ($i+1) ?></td>
+                <td><?php echo $ans['Name']; ?></td>
+                <td><input type="text" value="<?php '$pida[$i]' ?>" hidden="hidden"><button type="submit" name="2">HEALTH CARD</button> </td>
+            </tr>
+            <?php
+            }
+            else if($size == 3)
+            {
+            ?>
+            <tr>
+                <td><?php echo ($i+1) ?></td>
+                <td><?php echo $ans['Name']; ?></td>
+                <td><input type="text" value="<?php '$pida[$i]' ?>" hidden="hidden"><button type="submit" name="1">HEALTH CARD</button> </td>
+            </tr>
+            <?php $i=$i+1; ?>
+            <tr>
+                <td><?php echo ($i+1) ?></td>
+                <td><?php echo $ans['Name']; ?></td>
+                <td><input type="text" value="<?php '$pida[$i]' ?>" hidden="hidden"><button type="submit" name="2">HEALTH CARD</button> </td>
             </tr>
             <tr>
+                <?php $i=$i+1; ?>
+                <td><?php echo ($i+1) ?></td>
+                <td><?php echo $ans['Name']; ?></td>
+                <td><input type="text" value="<?php '$pida[$i]' ?>" hidden="hidden"><button type="submit" name="3">HEALTH CARD</button> </td>
+            </tr>
+            
+            
+            <?php
+            }
+                else 
+                {
+                ?>
+            <tr>
+                <td><?php echo ($i+1) ?></td>
+                <td><?php echo $ans['Name']; ?></td>
+                <td><input type="text" value="<?php '$pida[$i]' ?>" hidden="hidden"><button type="submit" name="1">HEALTH CARD</button> </td>
+            </tr>
+            <?php $i=$i+1; ?>
+            <tr>
+                <td><?php echo ($i+1) ?></td>
+                <td><?php echo $ans['Name']; ?></td>
+                <td><input type="text" value="<?php '$pida[$i]' ?>" hidden="hidden"><button type="submit" name="2">HEALTH CARD</button> </td>
+            </tr>
+            <?php $i=$i+1; ?>
+            <tr>
+                <td><?php echo ($i+1) ?></td>
+                <td><?php echo $ans['Name']; ?></td>
+                <td><input type="text" value="<?php '$pida[$i]' ?>" hidden="hidden"><button type="submit" name="3">HEALTH CARD</button> </td>
+            </tr>
+            <?php $i=$i+1; ?>
+            <tr>
+                <td><?php echo ($i+1) ?></td>
+                <td><?php echo $ans['Name']; ?></td>
+                <td><input type="text" value="<?php '$pida[$i]' ?>" hidden="hidden"><button type="submit" name="4">HEALTH CARD</button> </td>
+            </tr>
+            <!--<tr>
                 <td>2</td>
                 <td></td>
                 <td></td>
@@ -199,9 +303,16 @@ else{
                 <td>6</td>
                 <td></td>
                 <td></td>
-            </tr>
+            </tr>-->
             
-        </table>
+        
+            </form>
+            </table>
+        <?php
+                  
+             }
+        }
+        ?>
     </div>
     <br>
     <br>
@@ -216,5 +327,4 @@ else{
     </div>
 
 </body>
-
 </html>
