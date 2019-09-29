@@ -188,7 +188,11 @@ WHERE users.email='$user_email' AND users.user_id=data.user_id";
                 <li><a class="nav-link" href="#"><?php
           
                     $name=$_SESSION["USER_NAME"];
-                    $fetch1 = "SELECT user_pet.P_Id, pet_details.Name FROM user_pet, pet_details WHERE user_pet.P_Id = pet_details.P_Id and user_pet.P_Id = (select * from user_details where Name='$name')";
+                    $q="select * from user_details where Name='$name'";
+                    $r=mysqli_query($conn,$q);
+                    $a=mysqli_fetch_assoc($r);
+                    $id=$a['U_Id'];
+                    $fetch1 = "SELECT user_pet.P_Id, pet_details.Name FROM user_pet, pet_details WHERE user_pet.P_Id = pet_details.P_Id and user_pet.name ='$name'";
                     $result = mysqli_query($conn,$fetch1);
                     
                     
