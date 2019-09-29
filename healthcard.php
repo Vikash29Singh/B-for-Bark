@@ -2,7 +2,7 @@
 <?php include 'conn_file.php';  
     
 session_start();
-    ?>
+?>
 
 <head>
     <meta charset="utf-8">
