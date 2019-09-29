@@ -175,7 +175,7 @@ else{
                 <th>Pet Name</th>
                 <th>Health Card</th>
             </tr>
-        <form action="table.php" method="post">
+        <form action="healthcard2.php" method="post">
         
          <?php
         $docid=$_SESSION['USER_ID'];
