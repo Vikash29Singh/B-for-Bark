@@ -188,7 +188,12 @@ WHERE users.email='$user_email' AND users.user_id=data.user_id";
                 <li><a class="nav-link" href="#"><?php
           
                     
-                    $fetch1 = "SELECT user_pet.P_Id, pet_details.Name FROM user_pet, pet_details WHERE user_pet.P_Id = pet_details.P_Id";
+                    $name=$_SESSION["USER_NAME"];
+                    $q="select * from user_details where Name='$name'";
+                    $r=mysqli_query($conn,$q);
+                    $a=mysqli_fetch_assoc($r);
+                    $id=$a['U_Id'];
+                    $fetch1 = "SELECT user_pet.P_Id, pet_details.Name FROM user_pet, pet_details WHERE user_pet.P_Id = pet_details.P_Id and user_pet.name ='$name'";
                     $result = mysqli_query($conn,$fetch1);
                     
                     
@@ -252,7 +257,7 @@ WHERE users.email='$user_email' AND users.user_id=data.user_id";
                         
                         $res1 = mysqli_query($conn,$a);
                         $row1 = mysqli_fetch_assoc($res1);
-                            $pid = $row1['P_Id'];
+                            $pid = $row1['P_Id'];}
                         ?>
                         
                         <tbody>
@@ -334,7 +339,7 @@ WHERE users.email='$user_email' AND users.user_id=data.user_id";
                                         echo $row2['Medication'];
                                         echo ", ";
                                     }
-                                    }
+                                    
                                     ?>
                                 </td>
 
