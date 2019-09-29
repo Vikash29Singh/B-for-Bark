@@ -114,9 +114,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="petregister.php">Pet-Register</a>
                     </li>
+<!--
                     <li class="nav-item">
                         <a class="nav-link" href="">History</a>
                     </li>
+-->
                     <li class="nav-item">
                         <a class="nav-link" href="logout.php">Logout</a>
                     </li>
