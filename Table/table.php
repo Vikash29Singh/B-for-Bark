@@ -183,79 +183,47 @@ WHERE users.email='$user_email' AND users.user_id=data.user_id";
                 */?>
                 
                 <li><a class="nav-link" href="#"><?php
-          /*          
-                Table users:
-    user_id (pk, ai)
-    email
-    password
-    last_login
-
-Table data:
-    user_id (fk to users.user_id)
-    data_1
-    data_2
-    
-    SELECT users.email, users.password, data.data_1, data.data_2
-FROM users,data 
-WHERE users.email='$user_email' AND users.user_id=data.user_id";
-        */
+          
                     
                     $fetch1 = "SELECT user_pet.P_Id, pet_details.Name FROM user_pet, pet_details WHERE user_pet.P_Id = pet_details.P_Id";
                     $result = mysqli_query($conn,$fetch1);
                     
-                    $c = 0;
-                    //$row = mysqli_fetch_array($result)
-                    $array=array();
                     
-                    $size=mysqli_num_rows($result);
-                    
-                    
-                    while($row = mysqli_fetch_assoc($result))
-                    {
-
-                    // add each row returned into an array
-                    $array[] = $row;
-                    $c++;
-                    }
-                    
-                    for($i=0;$i<$size;$i++)
+                    while($row = mysqli_fetch_array($result))
                     {
                     echo "<tr>";
-                    echo "<td>" . $row['Name'] . "</td>";
-                    echo "<br>";
+                    //echo "<br>";
+                    echo "<td>" . $row['Name'] . "<br></td>";
                     //echo "<td>" . $row['Breed'] . "</td>";
                     echo "</tr>";
-                    
-                    
-
-                ?></a></li>
-                <li><a class="nav-link" href="#">
-                    <?php echo "<tr>";
-                    echo "<td>" . $row['Name'] . "</td>";
-                    echo "<br>";
-                    //echo "<td>" . $row['Breed'] . "</td>";
-                    echo "</tr>"; ?> </a></li>
-                <li><a class="nav-link" href="#"><?php echo "<tr>";
-                    echo "<td>" . $row['Name'] . "</td>";
-                    echo "<br>";
-                    //echo "<td>" . $row['Breed'] . "</td>";
-                    echo "</tr>"; ?></a></li>
-                    <?php
                     }
                     echo "</table>";
-                        ?>
+                    
+                    
+                ?></a></li>
 
             </ul>
             </li>
+<!--
 
             <li><a class="nav-link" href="#">PET DETAILS</a></li>
             <li><a class="nav-link" href="#">OTHER DETAILS</a></li>
+-->
+
         </ul>
     </div>
 
-
-    <div class="limiter">
+<div class="limiter">
+        
         <div class="container-table100">
+            
+        <form name="healthcard" action="table.php">
+            <div class="textbox">
+                    <!--        <i class="fas fa-user fa-3x " aria-hidden="true"></i>-->
+                    <input type="text" placeholder="Enter pet name" name="Pet_name" value="" required>
+                </div>
+            <input type="submit" name="Search">
+            </form>
             <div class="wrap-table100">
                 <div class="table100 ver6 m-b-110">
                     <table data-vertable="ver6">
