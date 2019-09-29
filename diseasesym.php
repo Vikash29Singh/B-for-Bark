@@ -305,7 +305,7 @@
                     $did=$drow['Doc_Id'];
                     
                     ?> <br> <form action="diseasesym.php" method="post">
-            <buton type="submit" name="send">TAKE APPOINTEMENT</buton>
+            <button type="submit" name="send">TAKE APPOINTEMENT</button>
                 <input type="text" name="pname" placeholder="for which pet of yours">
                 </form>
                 
