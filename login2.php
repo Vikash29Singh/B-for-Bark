@@ -23,7 +23,7 @@ $sqlp1="SELECT * FROM doctor_details WHERE Doc_name='$username' and Password='$p
                   if($id)
                   {
                     session_start();
-                    $_SESSION["USER_NAME"]=$id['Doc_name'];
+                    $_SESSION["USER_ID"]=$id['Doc_Id'];
                  header("Location: doctor.php");// to user homepage
                   }
                   else
