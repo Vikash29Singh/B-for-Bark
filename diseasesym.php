@@ -300,10 +300,42 @@
                 
                 while($drow=mysqli_fetch_assoc($da))
                 {
-                    echo $drow['Doc_name'];
+                    echo $drow['Doc_name']." From ";
+                    echo $drow['Location'];
+                    $did=$drow['Doc_Id'];
+                    
+                    ?> <br> <form action="diseasesym.php" method="post">
+            <buton type="submit" name="send">TAKE APPOINTEMENT</buton>
+                <input type="text" name="pname" placeholder="for which pet of yours">
+                            </form>
+                
+                <?php
                 }
             
-            
+            if(isset($_POST['send']))
+            {
+                $name=$_POST['pname'];
+                $uname=$_SESSION['USER_NAME'];
+                $pre1="Select * from user_details where Name='$uname'";
+                $rpre1=mysqli_query($conn,$pre1);
+                $ok=mysqli_fetch_assoc($rpre1);
+                $id=$ok['U_Id'];
+                
+                $qn="Select * from pet_details where Name='$name'";
+                $rqn=mysqli_query($conn,$qn);
+                $rw=mysqli_fetch_assoc($rqn);
+                $pid=$rw['P_Id'];
+                
+                    $qrysend="insert into doc_appointment(Doc_id,P_Id) values('$did','$pid')";
+                        $ans=mysqli_query($conn,$qrysend);
+                if($ans)
+                {
+                    echo "alert('APOINTEMENT TAKEN')";
+        
+                }
+                        
+                
+            }
             
             ?>
             </p>
