@@ -290,7 +290,8 @@
     <article>
         <center>
             <h3>SUGGESTED DOCTORS</h3>
-        </center>
+        </center
+            >
         <center>
             <p>
             <?php
