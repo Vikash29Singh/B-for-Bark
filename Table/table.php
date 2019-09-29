@@ -11,7 +11,6 @@
     <title>Table </title>
     <meta charset="UTF-8">
 
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta charset="utf-8">
@@ -117,18 +116,22 @@
                         <a class="nav-link" href="/B-for-Bark/search.php">Home</a>
                     </li>
                     <li>
+<!--
                     <li class="nav-item">
                         <a class="nav-link" href="#">Pets</a>
                     </li>
+-->
                     <li class="nav-item">
                         <a class="nav-link" href="table.php">Health card</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/B-for-Bark/petregister.php">Pet-Register</a>
                     </li>
+<!--
                     <li class="nav-item">
                         <a class="nav-link" href="">History</a>
                     </li>
+-->
                     <li class="nav-item">
                         <a class="nav-link" href="/B-for-Bark/logout.php">Logout</a>
                     </li>
@@ -214,19 +217,18 @@ WHERE users.email='$user_email' AND users.user_id=data.user_id";
     </div>
 
 <div class="limiter">
-        
-        <div class="container-table100">
-            
-        
-            <div class="textbox">
-                <form name="healthcard" action="table.php" method="post">
-                    <!--        <i class="fas fa-user fa-3x " aria-hidden="true"></i>-->
-                    <input type="text" placeholder="Enter pet name" name="Pet_name" value="" required>
-                </div>
-            <input type="submit" name="Search">
-            </form>
+        <div class="container-table100">            
             <div class="wrap-table100">
+                
+                 <form name="healthcard" action="table1.php" method="post">
+               
+                <input type="text" placeholder="Enter pet name" name="Pet_name" value="" required>
+                
+                <input type="submit" name="Search">
+            </form><br>
+                
                 <div class="table100 ver6 m-b-110">
+                    
                     <table data-vertable="ver6">
                         <thead>
                             <tr class="row100 head">
@@ -239,10 +241,9 @@ WHERE users.email='$user_email' AND users.user_id=data.user_id";
                             </tr>
 
                         </thead>
-                        
                         <?php
                         
-                        if(isset($_POST['Search']))
+                        /*if(isset($_POST['Search']))
                         {
                         
                             $name =$_POST['Pet_name'];
@@ -251,13 +252,13 @@ WHERE users.email='$user_email' AND users.user_id=data.user_id";
                         
                         $res1 = mysqli_query($conn,$a);
                         $row1 = mysqli_fetch_assoc($res1);
-                            $pid = $row1['P_Id'];
+                            $pid = $row1['P_Id'];}*/
                         ?>
                         
                         <tbody>
                             <tr class="row100">
                                 <td class="column100 column1" data-column="column1">NAME</td>
-                                <td class="column100 column2" data-column="column2"><?php 
+                                <td class="column100 column2" data-column="column2"><?php /*
                             
                             
                                 echo $row1['Name']; ?></td>
@@ -267,42 +268,42 @@ WHERE users.email='$user_email' AND users.user_id=data.user_id";
 
                             <tr class="row100">
                                 <td class="column100 column1" data-column="column1">BREED</td>
-                                <td class="column100 column2" data-column="column2"><?php 
+                                <td class="column100 column2" data-column="column2"><?php /*
                             
                             
-                                echo $row1['Breed']; ?></td>
+                                echo $row1['Breed']; */?></td>
 
 
                             </tr>
 
                             <tr class="row100">
                                 <td class="column100 column1" data-column="column1">BLOOD GROUP</td>
-                                <td class="column100 column2" data-column="column2"><?php 
+                                <td class="column100 column2" data-column="column2"><?php /*
                             
                             
-                                echo $row1['Blood_group']; ?></td>
+                                echo $row1['Blood_group']; */?></td>
 
                             </tr>
 
                             <tr class="row100">
                                 <td class="column100 column1" data-column="column1">AGE</td>
-                                <td class="column100 column2" data-column="column2"><?php 
+                                <td class="column100 column2" data-column="column2"><?php /*
                             
                             
-                                echo $row1['Age']; ?></td>
+                                echo $row1['Age']; */?></td>
                             </tr>
 
                             <tr class="row100">
                                 <td class="column100 column1" data-column="column1">WEIGHT</td>
-                                <td class="column100 column2" data-column="column2"><?php 
+                                <td class="column100 column2" data-column="column2"><?php /*
                             
                             
-                                echo $row1['Weight']; ?></td>
+                                echo $row1['Weight']; */?></td>
                             </tr>
 
                             <tr class="row100">
                                 <td class="column100 column1" data-column="column1">ALLERGIES</td>
-                                <td class="column100 column2" data-column="column2"> <?php 
+                                <td class="column100 column2" data-column="column2"> <?php /*
                             $c = "SELECT * from pet_allergies where P_Id = '$pid'";
                             
                         $res3 = mysqli_query($conn,$c);
@@ -312,7 +313,7 @@ WHERE users.email='$user_email' AND users.user_id=data.user_id";
                                         echo $row3['Allergies'];
                                         echo ", ";
                                     }
-                        
+                        */
                                     ?>
                                 </td>
 
@@ -320,7 +321,7 @@ WHERE users.email='$user_email' AND users.user_id=data.user_id";
 
                             <tr class="row100">
                                 <td class="column100 column1" data-column="column1">MEDICATION</td>
-                                <td class="column100 column2" data-column="column2"> <?php 
+                                <td class="column100 column2" data-column="column2"> <?php/* 
                             
                             
                             
@@ -332,8 +333,8 @@ WHERE users.email='$user_email' AND users.user_id=data.user_id";
                                     {
                                         echo $row2['Medication'];
                                         echo ", ";
-                                    }
-                        }
+                                    }*/
+                        
                                     ?>
                                 </td>
 
