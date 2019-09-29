@@ -8,10 +8,10 @@ include("conn_file.php");
 //$u_email=$_SESSION['email'];// session Email
 
 
-if(!isset($_SESSION['USER_NAME'])) 
+if(!isset($_SESSION['USER_ID'])) 
 	 header("Location: doctorlogin.php"); 
 else{
-	$user=$_SESSION['USER_NAME'];
+	$user=$_SESSION['USER_ID'];
 }
 #-----------------------------------------------------------------------------------------------------------------------
 ?>
@@ -89,7 +89,11 @@ else{
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <!--                WELCOME TO DOCTOR INFO</a>-->
                 
-                <a class="navbar-brand" href="">Hey Doctor <span style="color:#1ebba3;"> <?php echo $_SESSION["USER_NAME"]; echo"!";?> Welcome Back</span> Ready to care for <span style="color:#1ebba3;">Pet</span></a>
+                <a class="navbar-brand" href="">Hey Doctor <span style="color:#1ebba3;"> <?php
+                    $d = "Select Doc_name from doctor_details where Doc_Id ='$user' ";
+                    $result1 = mysqli_query($conn,$d);
+                    $rows = mysqli_fetch_assoc($result1);
+                    echo $rows['Doc_name']; echo"!";?> Welcome Back</span> Ready to care for <span style="color:#1ebba3;">Pet</span></a>
 
                 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
