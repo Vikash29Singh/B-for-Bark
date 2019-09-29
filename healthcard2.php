@@ -245,10 +245,10 @@ WHERE users.email='$user_email' AND users.user_id=data.user_id";
                         
                         if(isset($_POST['a1']))
                         {
-                        
-                            $name =$_POST['Pet_name'];
                             
-                        $a = "Select * from pet_details where Name = '$name' ";
+                            $id =$_POST['P_Id'];
+                            
+                        $a = "Select * from pet_details where P_Id = '$id' ";
                         
                         $res1 = mysqli_query($conn,$a);
                         $row1 = mysqli_fetch_assoc($res1);
