@@ -167,7 +167,7 @@
         </script>
         <!--<br><br><h3><li><a href="login.php" target="_self" >Back</a></li></h3>-->
         <form align="center" name="frmForgot" id="frmForgot" method="post" onSubmit="return validate_forgot();"><br><br><br><br>
-            <h1>Forgot Password?</h1>
+<!--            <h1>Forgot Password?</h1>-->
             <?php if(!empty($success_message)) 
 	{ ?>
             <div class="success_message"><?php echo $success_message; ?></div>
@@ -187,12 +187,27 @@
 		<div><input type="text" name="user-login-name" id="user-login-name" class="input-field"> Or</div>
 	</div>
 	 -->
+<!--
             <div class="field-group">
                 <div><label for="email">
                         <h3>Enter Your Email</h3>
                     </label></div>
                 <div><input type="text" name="user-email" id="user-email" class="input-field" required>
                     <input type="submit" name="forgot-password" id="forgot-password" value="Submit" class="form-submit-button">
+-->
+                    
+                    
+                    <div class="col-12 narrow text-center login-box">
+            <form action="login1.php" method="post">
+                <h1>Forgot Password?</h1>
+                <div class="textbox">
+                    <input type="email" name="user-email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 3}$" title="Please input a valid format for email." placeholder="Email" id="user-email" class="input-field" required >
+                </div>
+
+                <button class="btn btn-secondary btn-md" href="search.php" target="_blank" name="forgot-password" id="forgot-password" value="Submit" class="form-submit-button">Sign-in</button>
+
+
+            </form>
                 </div>
             </div>
         </form>
