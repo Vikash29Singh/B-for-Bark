@@ -509,10 +509,6 @@ WHERE users.email='$user_email' AND users.user_id=data.user_id";
                                         echo $row2['Medication'];
                                         echo ", ";
                                     }
-                                                                        
-            
-            
-            
         }
         else
         {
