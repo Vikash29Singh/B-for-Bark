@@ -170,9 +170,6 @@
     }
     
     
-    
-    
-    
     if(isset($_POST['symp']))
        {
           $sy=explode(",",$_POST['symp']);
@@ -213,13 +210,6 @@
            
          
        }
-    
-    
-    
- 
-   
-    
-    
     
     ?>
 
