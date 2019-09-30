@@ -241,7 +241,7 @@ WHERE users.email='$user_email' AND users.user_id=data.user_id";
                 </div>
 -->
                 <br>
-                
+                <form action="healthcard2.php" method="post">
                 <div class="table100 ver6 m-b-110">
                     
                     <table data-vertable="ver6">
@@ -279,51 +279,51 @@ WHERE users.email='$user_email' AND users.user_id=data.user_id";
                         <tbody>
                             <tr class="row100">
                                 <td class="column100 column1" data-column="column1">NAME</td>
-                                <td class="column100 column2" data-column="column2"><?php 
+                                <td class="column100 column2" data-column="column2"><input type="text" id="name" name="name" value="<?php 
                             
                             
-                                echo $row1['Name']; ?></td>
+                                echo $row1['Name']; ?>" disabled></td>
 
 
                             </tr>
 
                             <tr class="row100">
                                 <td class="column100 column1" data-column="column1">BREED</td>
-                                <td class="column100 column2" data-column="column2"><?php 
+                                <td class="column100 column2" data-column="column2"><input type="text" id="breed" name="breed" value="<?php 
                             
                             
-                                echo $row1['Breed'];?></td>
+                                echo $row1['Breed'];?>" disabled></td>
 
 
                             </tr>
 
                             <tr class="row100">
                                 <td class="column100 column1" data-column="column1">BLOOD GROUP</td>
-                                <td class="column100 column2" data-column="column2"><?php 
+                                <td class="column100 column2" data-column="column2"><input type="text" id="bgroup" name="bgroup" value="<?php 
                             
-                                echo $row1['Blood_group']; ?></td>
+                                echo $row1['Blood_group']; ?>" disabled></td>
 
                             </tr>
 
                             <tr class="row100">
                                 <td class="column100 column1" data-column="column1">AGE</td>
-                                <td class="column100 column2" data-column="column2"><?php 
+                                <td class="column100 column2" data-column="column2"><input type="text" id="age" name="age" value="<?php 
                             
                             
-                                echo $row1['Age']; ?></td>
+                                echo $row1['Age']; ?>" disabled></td>
                             </tr>
 
                             <tr class="row100">
                                 <td class="column100 column1" data-column="column1">WEIGHT</td>
-                                <td class="column100 column2" data-column="column2"><?php 
+                                <td class="column100 column2" data-column="column2"><input type="text" id="weight" name="weight" value="<?php 
                             
                             
-                                echo $row1['Weight']; ?></td>
+                                echo $row1['Weight']; ?>" disabled></td>
                             </tr>
 
                             <tr class="row100">
                                 <td class="column100 column1" data-column="column1">ALLERGIES</td>
-                                <td class="column100 column2" data-column="column2"> <?php 
+                                <td class="column100 column2" data-column="column2"><input type="text" name="allergies" value="<?php 
                             $c = "SELECT * from pet_allergies where P_Id = '$id'";
                             
                         $res3 = mysqli_query($conn,$c);
@@ -334,14 +334,14 @@ WHERE users.email='$user_email' AND users.user_id=data.user_id";
                                         echo ", ";
                                     }
                         
-                                    ?>
+                                    ?>" disabled>
                                 </td>
 
                             </tr>
 
                             <tr class="row100">
                                 <td class="column100 column1" data-column="column1">MEDICATION</td>
-                                <td class="column100 column2" data-column="column2"> <?php
+                                <td class="column100 column2" data-column="column2"><input type="text" id="med" name="med" value="<?php
                                 
                             }
                             else
@@ -361,7 +361,7 @@ WHERE users.email='$user_email' AND users.user_id=data.user_id";
                                         echo ", ";
                                     }
                         }
-                                    ?>
+                                    ?>" disabled>
                                 </td>
 
                             </tr>
@@ -369,16 +369,165 @@ WHERE users.email='$user_email' AND users.user_id=data.user_id";
                         </tbody>
                     </table>
                 </div>
+                             
+<button type="button" name="k1" onclick="tenable()">ENABLE MODIFICATION</button><br><br>
+<button type="submit" name="k2">MODIFY</button>                    
+</form>
             </div>
         </div>
     </div>
+    <script>
+        function tenable()
+        {
+            document.getElementById("name").disabled = false;
+            document.getElementById("age").disabled = false;
+            document.getElementById("bgroup").disabled = false;
+            document.getElementById("breed").disabled = false;
+            document.getElementById("med").disabled = false;
+            document.getElementById("weight").disabled = false;
+            document.getElementById("allergies").disabled = false;
+        }
+    </script>
+    
+    
+    <?php
+    if(isset($_POST['k2']))
+    {
+        $nm=$_POST['name'];
+        $age=$_POST['age'];
+        $breed=$_POST['breed'];
+        $bgroup=$_POST['bgroup'];
+        $weight=$_POST['weight'];
+        $allergies=$_POST['allergies'];
+        $med=$_POST['med'];
+        $ida =$_SESSION["P1"];
+        echo $nm." ".$age." ".$breed." ".$bgroup." ".$weight ;
+        $qu="update pet_details set Name='$nm', Breed='$breed', Blood_Group='$bgroup', Age='$age', Weight='$weight' where P_Id='$ida'";
+        $rn=mysqli_query($conn,$qu);
+        $ans=mysqli_fetch_assoc($rn);
+        
+        
+        if($ans)
+        {                                    
+            
+            
+                $id =$_SESSION["P1"];
+                            //echo "Hello".$id;
+                            //$a=$_SESSION["P1"];
+                            //echo "ok".$a;
+                            
+                        $a = "Select * from pet_details where P_Id = '$id' ";
+                        
+                        $res1 = mysqli_query($conn,$a);
+                        $row1 = mysqli_fetch_assoc($res1);
+                            //$pid = $row1['P_Id']; 
+                            if($row1)
+                            {
+                        ?>
+
+                        
+                        <tbody>
+                            <tr class="row100">
+                                <td class="column100 column1" data-column="column1">NAME</td>
+                                <td class="column100 column2" data-column="column2"><input type="text"  id="name"  name="name" value="<?php 
+                            
+                            
+                                echo $row1['Name']; ?>" disabled></td>
 
 
+                            </tr>
+
+                            <tr class="row100">
+                                <td class="column100 column1" data-column="column1">BREED</td>
+                                <td class="column100 column2" data-column="column2"><input type="text" id="breed" name="breed" value="<?php 
+                            
+                            
+                                echo $row1['Breed'];?>" disabled></td>
 
 
+                            </tr>
+
+                            <tr class="row100">
+                                <td class="column100 column1" data-column="column1">BLOOD GROUP</td>
+                                <td class="column100 column2" data-column="column2"><input type="text" id="bgroup" name="breed" value="<?php 
+                            
+                                echo $row1['Blood_group']; ?>" disabled></td>
+
+                            </tr>
+
+                            <tr class="row100">
+                                <td class="column100 column1" data-column="column1">AGE</td>
+                                <td class="column100 column2" data-column="column2"><input type="text" id="age" name="age" value="<?php 
+                            
+                            
+                                echo $row1['Age']; ?>" disabled></td>
+                            </tr>
+
+                            <tr class="row100">
+                                <td class="column100 column1" data-column="column1">WEIGHT</td>
+                                <td class="column100 column2" data-column="column2"><input type="text" id="weight" name="weight" value="<?php 
+                            
+                            
+                                echo $row1['Weight']; ?>" disabled></td>
+                            </tr>
+
+                            <tr class="row100">
+                                <td class="column100 column1" data-column="column1">ALLERGIES</td>
+                                <td class="column100 column2" data-column="column2"><input type="text" id="allergies" name="allergies" value="<?php 
+                            $c = "SELECT * from pet_allergies where P_Id = '$id'";
+                            
+                        $res3 = mysqli_query($conn,$c);
+                            
+                            while($row3 = mysqli_fetch_array($res3))
+                                    {
+                                        echo $row3['Allergies'];
+                                        echo ", ";
+                                    }
+                        
+                                    ?>" disabled></td>
+
+                            </tr>
+
+                            <tr class="row100">
+                                <td class="column100 column1" data-column="column1">MEDICATION</td>
+                                <td class="column100 column2" data-column="column2"><input type="text" id="med" name="med" value="<?php
+                                
+                            }
+                            else
+                            {
+                                echo "WRONG SOMEWHERE".mysqli_error($conn);
+                            }
+                            
+                            
+                            
+                        $b = "SELECT * from pet_medic where P_Id = '$id'";
+                            
+                        $res2 = mysqli_query($conn,$b);
+                            
+                            while($row2 = mysqli_fetch_array($res2))
+                                    {
+                                        echo $row2['Medication'];
+                                        echo ", ";
+                                    }
+                                                                        
+            
+            
+            
+        }
+        else
+        {
+            echo "error";
+        }
+        
+    }
+    
+    ?>
+    
     <!--===============================================================================================-->
+                    
     <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
     <!--===============================================================================================-->
+                                
     <script src="vendor/bootstrap/js/popper.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
     <!--===============================================================================================-->
