@@ -185,7 +185,7 @@ WHERE users.email='$user_email' AND users.user_id=data.user_id";
 
                 */?>
                 
-                <li><a class="nav-link" href="#"><?php
+                <li><a class="nav-link" href="#"><?php /*
           
                     
                     $name=$_SESSION["USER_NAME"];
@@ -206,7 +206,7 @@ WHERE users.email='$user_email' AND users.user_id=data.user_id";
                     echo "</tr>";
                     }
                     echo "</table>";
-                    
+                    */
                     
                 ?></a></li>
 
@@ -261,65 +261,70 @@ WHERE users.email='$user_email' AND users.user_id=data.user_id";
                         if(isset($_POST['a1']))
                         {
                             
-                            $id =$_POST['P_Id'];
+                            $id =$_SESSION["P1"];
+                            //echo "Hello".$id;
+                            //$a=$_SESSION["P1"];
+                            //echo "ok".$a;
                             
                         $a = "Select * from pet_details where P_Id = '$id' ";
                         
                         $res1 = mysqli_query($conn,$a);
                         $row1 = mysqli_fetch_assoc($res1);
-                            $pid = $row1['P_Id']; }
+                            //$pid = $row1['P_Id']; 
+                            if($row1)
+                            {
                         ?>
 
                         
                         <tbody>
                             <tr class="row100">
                                 <td class="column100 column1" data-column="column1">NAME</td>
-                                <td class="column100 column2" data-column="column2"><?php /*
+                                <td class="column100 column2" data-column="column2"><?php 
                             
                             
-                                echo $row1['Name']; */?></td>
+                                echo $row1['Name']; ?></td>
 
 
                             </tr>
 
                             <tr class="row100">
                                 <td class="column100 column1" data-column="column1">BREED</td>
-                                <td class="column100 column2" data-column="column2"><?php /*
+                                <td class="column100 column2" data-column="column2"><?php 
                             
                             
-                                echo $row1['Breed'];*/?></td>
+                                echo $row1['Breed'];?></td>
 
 
                             </tr>
 
                             <tr class="row100">
                                 <td class="column100 column1" data-column="column1">BLOOD GROUP</td>
-                                <td class="column100 column2" data-column="column2"><?php /*
+                                <td class="column100 column2" data-column="column2"><?php 
                             
-                                echo $row1['Blood_group']; */?></td>
+                                echo $row1['Blood_group']; ?></td>
 
                             </tr>
 
                             <tr class="row100">
                                 <td class="column100 column1" data-column="column1">AGE</td>
-                                <td class="column100 column2" data-column="column2"><?php /*
+                                <td class="column100 column2" data-column="column2"><?php 
                             
                             
-                                echo $row1['Age']; */?></td>
+                                echo $row1['Age']; ?></td>
                             </tr>
 
                             <tr class="row100">
                                 <td class="column100 column1" data-column="column1">WEIGHT</td>
-                                <td class="column100 column2" data-column="column2"><?php /*
+                                <td class="column100 column2" data-column="column2"><?php 
                             
                             
-                                echo $row1['Weight'];*/ ?></td>
+                                echo $row1['Weight']; ?></td>
                             </tr>
 
                             <tr class="row100">
                                 <td class="column100 column1" data-column="column1">ALLERGIES</td>
-                                <td class="column100 column2" data-column="column2"> <?php /*
-                            $c = "SELECT * from pet_allergies where P_Id = '$pid'";
+                                <td class="column100 column2" data-column="column2"> <?php 
+                            $c = "SELECT * from pet_allergies where P_Id = '$id'";
                             
                         $res3 = mysqli_query($conn,$c);
                             
@@ -328,7 +333,7 @@ WHERE users.email='$user_email' AND users.user_id=data.user_id";
                                         echo $row3['Allergies'];
                                         echo ", ";
                                     }
-                        */
+                        
                                     ?>
                                 </td>
 
@@ -336,11 +341,17 @@ WHERE users.email='$user_email' AND users.user_id=data.user_id";
 
                             <tr class="row100">
                                 <td class="column100 column1" data-column="column1">MEDICATION</td>
-                                <td class="column100 column2" data-column="column2"> <?php/*
+                                <td class="column100 column2" data-column="column2"> <?php
+                                
+                            }
+                            else
+                            {
+                                echo "WRONG SOMEWHERE".mysqli_error($conn);
+                            }
                             
                             
                             
-                        $b = "SELECT * from pet_medic where P_Id = '$pid'";
+                        $b = "SELECT * from pet_medic where P_Id = '$id'";
                             
                         $res2 = mysqli_query($conn,$b);
                             
@@ -349,7 +360,7 @@ WHERE users.email='$user_email' AND users.user_id=data.user_id";
                                         echo $row2['Medication'];
                                         echo ", ";
                                     }
-                        }*/
+                        }
                                     ?>
                                 </td>
 
