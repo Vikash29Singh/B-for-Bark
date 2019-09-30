@@ -282,7 +282,7 @@
         </div>
     </div>
     <article>
-        <center>
+        <center>s
             <h3>SUGGESTED DOCTORS</h3>
         </center
             >
