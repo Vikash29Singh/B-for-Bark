@@ -175,7 +175,7 @@ else{
                 <th>Pet Name</th>
                 <th>Health Card</th>
             </tr>
-        <form action="healthcard2.php" method="post">
+        <form action="/B-for-Bark/Table/healthcard2.php" method="post">
         
          <?php
         $docid=$_SESSION['USER_ID'];
@@ -188,6 +188,7 @@ else{
         while($row=mysqli_fetch_assoc($rn))
         {
             $pid=$row['P_Id'];
+            echo $pid;
             $pida[$i]=$row['P_Id']; //taken an array to store all the id's so that one can display the healthcard accordingly.
             //echo $row['P_Id'];
             $qry2="Select * from pet_details where P_Id='$pid'";
@@ -211,7 +212,9 @@ else{
             <tr>
                 <td><?php echo ($i+1) ?></td>
                 <td><?php echo $ans['Name']; ?></td>
-                <td><input type="text" value="<?php '$pida[$i]' ?>" hidden="hidden"><button type="submit" name="a1">HEALTH CARD</button> </td>
+                <td><input type="text" value="<?php '$pida[$i]' ?>" hidden="hidden" name="val"><?php  $_SESSION["P1"]=$pid;
+                 
+                    ?><button type="submit" name="a1">HEALTH CARD</button> </td>
             </tr>
             <?php
             }
