@@ -113,7 +113,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/B-for-Bark/search.php">Home</a>
+                        <a class="nav-link" href="/B-for-Bark/doctor.php">Home</a>
                     </li>
                     <li>
 <!--
@@ -122,11 +122,13 @@
                     </li>
 -->
                     <li class="nav-item">
-                        <a class="nav-link" href="table.php">Health card</a>
+                        <a class="nav-link" href="healthcard2.php">Health card</a>
                     </li>
+<!--
                     <li class="nav-item">
                         <a class="nav-link" href="/B-for-Bark/petregister.php">Pet-Register</a>
                     </li>
+-->
 <!--
                     <li class="nav-item">
                         <a class="nav-link" href="">History</a>
