@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Sep 28, 2019 at 06:53 PM
+-- Generation Time: Sep 30, 2019 at 04:24 AM
 -- Server version: 5.7.19
 -- PHP Version: 5.6.31
 
@@ -25,18 +25,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `diagnosis`
---
-
-DROP TABLE IF EXISTS `diagnosis`;
-CREATE TABLE IF NOT EXISTS `diagnosis` (
-  `P_Id` int(11) NOT NULL DEFAULT '0',
-  `Diagnosed` varchar(30) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `disease_details`
 --
 
@@ -54,9 +42,9 @@ CREATE TABLE IF NOT EXISTS `disease_details` (
 --
 
 INSERT INTO `disease_details` (`Disease_Id`, `Disease_name`, `Disease_type`, `Disease_description`) VALUES
-(1, 'common cold', 'Genral', 'The viruses that cause colds in people are generally species-specific. Its not a common disease that can be easily cured with proper care'),
+(1, 'common cold', 'General', 'The viruses that cause colds in people are generally species-specific. Its not a common disease that can be easily cured with proper care'),
 (2, 'Acne', 'Skin Disease', 'Acne tends to come on at puberty, from five to eight months of age. Typically it is gone by the time the dog reaches one year of age.'),
-(3, 'Acute Vomiting', 'Upset Digestive System', 'They might have eaten something that upset their stomachs, or just have sensitive digestive systems. However, it becomes acute when the vomiting does not stop and when there is nothing left in the stomach to throw up except bile (a yellow fluid).'),
+(3, 'Acute Vomiting', 'Digestive System', 'They might have eaten something that upset their stomachs, or just have sensitive digestive systems. However, it becomes acute when the vomiting does not stop and when there is nothing left in the stomach to throw up except bile (a yellow fluid).'),
 (4, 'Pyrexia', 'Fever', 'Fever, referred to medically as pyrexia, can be defined as a higher than normal body temperature in dogs. With the normal range falling between 99.5-102.5 Fahrenheit, a body temperature of at least 103.5 ° F (39.7° C) can be considered a fever.');
 
 -- --------------------------------------------------------
@@ -86,14 +74,16 @@ CREATE TABLE IF NOT EXISTS `doctor_details` (
   `Location` varchar(30) NOT NULL,
   `Phone` int(10) NOT NULL,
   PRIMARY KEY (`Doc_Id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `doctor_details`
 --
 
 INSERT INTO `doctor_details` (`Doc_Id`, `Password`, `Doc_name`, `Speciality`, `Location`, `Phone`) VALUES
-(1, 'anil@123', 'Anil Kumar', 'MBBS', 'Bangalore', 87660437);
+(1, 'anil@123', 'Anil Kumar', 'General', 'Bangalore', 87660437),
+(2, 'rahul@123', 'Rahul', 'Skin Disease', 'SG Palya', 955777347),
+(3, 'karan@123', 'Karan', 'Digestive System', 'White Field', 943534924);
 
 -- --------------------------------------------------------
 
@@ -105,9 +95,16 @@ DROP TABLE IF EXISTS `doc_appointment`;
 CREATE TABLE IF NOT EXISTS `doc_appointment` (
   `Appointment_Id` int(11) NOT NULL AUTO_INCREMENT,
   `Doc_Id` int(11) NOT NULL,
-  `U_Id` int(11) NOT NULL,
+  `P_Id` int(11) NOT NULL,
   PRIMARY KEY (`Appointment_Id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=36 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `doc_appointment`
+--
+
+INSERT INTO `doc_appointment` (`Appointment_Id`, `Doc_Id`, `P_Id`) VALUES
+(35, 3, 30);
 
 -- --------------------------------------------------------
 
@@ -122,7 +119,7 @@ CREATE TABLE IF NOT EXISTS `d_search` (
   `Date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `Search_Id` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`Search_Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=85 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `d_search`
@@ -166,26 +163,53 @@ INSERT INTO `d_search` (`U_Id`, `Disease_Id`, `Date`, `Search_Id`) VALUES
 (9, 3, '2019-09-20 06:25:13', 35),
 (9, 2, '2019-09-28 07:18:15', 36),
 (9, 2, '2019-09-28 07:18:54', 37),
-(9, 2, '2019-09-28 10:06:32', 38);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `healthcard_update_table`
---
-
-DROP TABLE IF EXISTS `healthcard_update_table`;
-CREATE TABLE IF NOT EXISTS `healthcard_update_table` (
-  `Updation_id` int(11) NOT NULL AUTO_INCREMENT,
-  `Pid` int(11) NOT NULL,
-  `Doc_id` int(11) NOT NULL,
-  `Age` tinyint(1) NOT NULL,
-  `Weight` tinyint(1) NOT NULL,
-  `Allergies` tinyint(1) NOT NULL,
-  `Medication` tinyint(1) NOT NULL,
-  `Update_time` tinyint(1) NOT NULL,
-  PRIMARY KEY (`Updation_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+(9, 2, '2019-09-28 10:06:32', 38),
+(9, 3, '2019-09-29 09:13:36', 39),
+(9, 1, '2019-09-29 09:13:47', 40),
+(9, 1, '2019-09-29 09:18:14', 41),
+(9, 1, '2019-09-29 09:21:47', 42),
+(9, 1, '2019-09-29 09:21:52', 43),
+(9, 1, '2019-09-29 09:31:08', 44),
+(9, 1, '2019-09-29 09:38:09', 45),
+(9, 1, '2019-09-29 10:19:55', 46),
+(9, 1, '2019-09-29 12:37:12', 47),
+(9, 3, '2019-09-29 15:16:03', 48),
+(9, 3, '2019-09-29 15:25:40', 49),
+(9, 3, '2019-09-29 15:25:49', 50),
+(9, 1, '2019-09-29 16:35:23', 51),
+(9, 2, '2019-09-29 16:35:37', 52),
+(9, 3, '2019-09-29 16:35:44', 53),
+(14, 2, '2019-09-30 03:45:34', 54),
+(14, 2, '2019-09-30 03:46:28', 55),
+(14, 1, '2019-09-30 03:46:37', 56),
+(14, 2, '2019-09-30 03:51:56', 57),
+(14, 3, '2019-09-30 03:57:22', 58),
+(14, 3, '2019-09-30 04:01:07', 59),
+(14, 1, '2019-09-30 04:02:21', 60),
+(14, 1, '2019-09-30 04:03:18', 61),
+(14, 3, '2019-09-30 04:06:39', 62),
+(14, 1, '2019-09-30 04:07:14', 63),
+(14, 2, '2019-09-30 04:13:08', 64),
+(14, 1, '2019-09-30 04:13:31', 65),
+(14, 3, '2019-09-30 04:13:51', 66),
+(14, 3, '2019-09-30 04:14:15', 67),
+(14, 2, '2019-09-30 04:14:32', 68),
+(14, 1, '2019-09-30 04:15:02', 69),
+(14, 3, '2019-09-30 04:15:56', 70),
+(14, 3, '2019-09-30 04:16:09', 71),
+(14, 2, '2019-09-30 04:16:36', 72),
+(14, 3, '2019-09-30 04:17:07', 73),
+(14, 2, '2019-09-30 04:17:18', 74),
+(14, 1, '2019-09-30 04:17:33', 75),
+(14, 3, '2019-09-30 04:18:23', 76),
+(14, 2, '2019-09-30 04:18:32', 77),
+(14, 3, '2019-09-30 04:18:45', 78),
+(14, 1, '2019-09-30 04:18:52', 79),
+(14, 2, '2019-09-30 04:19:09', 80),
+(9, 3, '2019-09-30 04:19:38', 81),
+(9, 2, '2019-09-30 04:21:03', 82),
+(9, 1, '2019-09-30 04:21:11', 83),
+(9, 3, '2019-09-30 04:22:12', 84);
 
 -- --------------------------------------------------------
 
@@ -230,7 +254,18 @@ INSERT INTO `pet_allergies` (`P_Id`, `Allergies`) VALUES
 (30, 'ahbhj'),
 (30, 'dsss'),
 (30, 'ghg'),
-(30, 'asdsda');
+(30, 'asdsda'),
+(32, 'ashgh'),
+(32, 'sasdffs'),
+(32, 'fghfh'),
+(33, 'spores'),
+(33, ' dust mites'),
+(34, 'casd'),
+(34, 'gfh'),
+(34, 'th'),
+(35, 'trtrtrtr'),
+(35, 'tytyty'),
+(36, 'asas');
 
 -- --------------------------------------------------------
 
@@ -259,7 +294,7 @@ CREATE TABLE IF NOT EXISTS `pet_details` (
   `Age` int(11) NOT NULL,
   `Weight` int(11) NOT NULL,
   PRIMARY KEY (`P_Id`)
-) ENGINE=MyISAM AUTO_INCREMENT=32 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=37 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `pet_details`
@@ -283,7 +318,12 @@ INSERT INTO `pet_details` (`P_Id`, `Name`, `Breed`, `Blood_group`, `Age`, `Weigh
 (28, '1121212', 'sdhh', 'a+', 23, 5),
 (29, 'mc', 'bc', 'a+', 8, 44),
 (30, 'hello', 'bye', 'o+', 12, 23),
-(31, 'hello', 'bye', 'o+', 12, 23);
+(31, 'hello', 'bye', 'o+', 12, 23),
+(32, 'aman', 'chomu', 'a+', 12, 54),
+(33, 'bruno', 'labra', 'o+', 4, 24),
+(34, 'manoj', 'sdds', 'a+', 12, 53),
+(35, 'addfdfdf', 'sfdsdfsdsfd', 'o+', 23, 28),
+(36, 'tieson', 'desi', 'b+', 6, 23);
 
 -- --------------------------------------------------------
 
@@ -323,7 +363,19 @@ INSERT INTO `pet_medic` (`P_Id`, `Medication`) VALUES
 (30, 'hg'),
 (30, 'asd'),
 (30, 'fs'),
-(30, 'hg');
+(30, 'hg'),
+(32, 'sfsf'),
+(32, 'gfhfh'),
+(32, 'tte'),
+(33, 'routine checkup'),
+(33, ' glucose'),
+(34, 'rf'),
+(34, 'egt'),
+(34, 'hj'),
+(35, 'jmjjjh'),
+(35, 'ghjghjgjh'),
+(36, 'digestion'),
+(36, ' skin');
 
 -- --------------------------------------------------------
 
@@ -440,7 +492,12 @@ CREATE TABLE IF NOT EXISTS `user_pet` (
 INSERT INTO `user_pet` (`P_Id`, `Name`) VALUES
 (29, 'jai'),
 (30, 'jai'),
-(30, 'jai');
+(30, 'jai'),
+(32, 'jai'),
+(33, 'jai'),
+(34, 'rahul'),
+(35, 'rahul'),
+(36, 'Koustabh Krishna');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

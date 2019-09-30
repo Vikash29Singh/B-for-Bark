@@ -170,9 +170,6 @@
     }
     
     
-    
-    
-    
     if(isset($_POST['symp']))
        {
           $sy=explode(",",$_POST['symp']);
@@ -213,13 +210,6 @@
            
          
        }
-    
-    
-    
- 
-   
-    
-    
     
     ?>
 
@@ -334,8 +324,10 @@
                     $qrysend="insert into doc_appointment(Doc_id,P_Id) values('$did','$pid')";
                         $ans=mysqli_query($conn,$qrysend);
                 if($ans)
-                {
-                    echo "alert('APOINTEMENT TAKEN')";
+                {   echo "<script language = \"JavaScript\">\n";
+                    echo "window.alert('APOINTEMENT TAKEN');";
+                    echo "window.location='search.php'";
+                    echo "</script>";
         
                 }
                         
