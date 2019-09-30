@@ -179,17 +179,19 @@ else{
         
          <?php
         $docid=$_SESSION['USER_ID'];
-        
+        //echo $docid;
         
         $qry="select * from doc_appointment where Doc_Id='$docid'";
         $rn=mysqli_query($conn,$qry);
         $i=0;
             $size=mysqli_num_rows($rn);
+            //echo $size;
         while($row=mysqli_fetch_assoc($rn))
         {
             $pid=$row['P_Id'];
-            echo $pid;
+            //echo $pid;
             $pida[$i]=$row['P_Id']; //taken an array to store all the id's so that one can display the healthcard accordingly.
+            //echo $pid[$i];
             //echo $row['P_Id'];
             $qry2="Select * from pet_details where P_Id='$pid'";
             $rn2=mysqli_query($conn,$qry2);
@@ -227,14 +229,14 @@ else{
             <tr>
                 <td><?php echo ($i+1) ?></td>
                 <td><?php echo $ans['Name']; ?></td>
-                <td><input type="text" value="<?php '$pida[$i]' ?>" hidden="hidden"><button type="submit" name="b1">HEALTH CARD</button> </td>
+                <td><input type="text" value="<?php '$pid'?>" hidden="hidden"><?php  $_SESSION["P1"][$i]=$pida[$i]; ?><button type="submit" name="b1">HEALTH CARD</button> </td>
             </tr>
             <?php $i=$i+1; ?>
-            <tr>
-                <td><?php echo ($i+1) ?></td>
-                <td><?php echo $ans['Name']; ?></td>
-                <td><input type="text" value="<?php '$pida[$i]' ?>" hidden="hidden"><button type="submit" name="b2">HEALTH CARD</button> </td>
-            </tr>
+            <!--<tr>
+                <td><?php // echo ($i+1) ?></td>
+                <td><?php // echo $ans['Name']; ?></td>
+                <td><input type="text" value="<?php // '$pida[$i]' ?>" hidden="hidden"><?php  //$_SESSION["P1"]=$pid[$i]; ?><button type="submit" name="b2">HEALTH CARD</button> </td>
+            </tr>-->
             <?php
             }
             else if($size == 3)
